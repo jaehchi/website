@@ -7,7 +7,7 @@
     "rest-server": "entry.js"
   },
   "scripts": {
-    "start":"nodemon bin/entry.js"
+    "start": "nodemon bin/entry.js"
   },
   "keywords": [],
   "author": "",
@@ -23,6 +23,7 @@
   },
   "devDependencies": {
     "babel-polyfill": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
     "babel-register": "^6.26.0"
   },
   "babel": {
