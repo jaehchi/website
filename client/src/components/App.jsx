@@ -7,6 +7,7 @@ import Tech from './Tech';
 import Porfolio from './Portfolio';
 import Footer from './Footer';
 
+import './index.scss';
 class App extends Component {
   constructor(props) {
     super(props);
@@ -14,9 +15,13 @@ class App extends Component {
 
   render() {
     return (
-      <div className="title">
-        hello from REACT!!
+      <div>
+        <Header/>
+        {/* <Nav/>
         <About/>
+        <Tech/>
+        <Portfolio/>
+        <Footer/> */}
       </div>
     );
   }
