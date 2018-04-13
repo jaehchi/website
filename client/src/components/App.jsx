@@ -8,6 +8,7 @@ import Porfolio from './Portfolio';
 import Footer from './Footer';
 
 import './index.scss';
+
 class App extends Component {
   constructor(props) {
     super(props);
@@ -17,11 +18,11 @@ class App extends Component {
     return (
       <div>
         <Header/>
-        {/* <Nav/>
-        <About/>
-        <Tech/>
-        <Portfolio/>
-        <Footer/> */}
+        <Nav/>
+        {/* <About/> */}
+        {/* <Tech/> */}
+        {/* <Portfolio/> */}
+        {/* <Footer/> */}
       </div>
     );
   }

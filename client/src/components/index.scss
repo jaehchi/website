@@ -44,13 +44,26 @@ table {
   border-spacing: 0;
 } 
 
+html {
+  overflow: hidden;
+  height: 100%;
+}
 
+body {
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+}
 
+a {
+  -webkit-transition: all 0.1s linear;
+  -moz-transition: all 0.1s linear;
+  transition: all 0.1s linear;
+}
 
-// .container {
-//   margin-right: auto;
-//   margin-left: auto;
-//   padding-left: 15px;
-//   padding-right: 15px;
-// }
-
+.container {
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}

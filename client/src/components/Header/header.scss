@@ -1,18 +1,18 @@
-// Imports
+/* -- Imports -- */ 
+
 @import url('https://fonts.googleapis.com/css?family=Open+Sans');
 
-// Variables
+/* -- Variables -- */ 
+
 $white: #FFF;
-// $lightRed: #ea5555;
 $lightBlue: #27b1ae;
 
-
-// Header
+/* -- header -- */ 
 
 #header {
   height: 100%;
   width: 100%;
-
+  
   h1, h2, h3, h4, h5, h6, p, a {
     color: $white;
     font-family: 'Open Sans', Arial, sans-serif;
@@ -54,6 +54,12 @@ $lightBlue: #27b1ae;
   }
 }
 
+.header-image {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+
 .header-bg {
   margin: auto;
   height: 100%;
@@ -64,9 +70,21 @@ $lightBlue: #27b1ae;
   ), url('./header-bg.jpg') 50% 50% no-repeat;
   background-size: cover;
   display: table;
-  position: fixed;
   opacity: 1;
+  float:left;
+  min-height: 100vh;
+  // position: absolulte;
+  z-index: 2;
 }
+
+    /* height: 857px; */
+    /* width: 100%; */
+    /* float: left; */
+    /* margin-right: -100%; */
+    /* position: relative; */
+    /* display: block; */
+    /* z-index: 2; */
+    /* opacity: 1; */
 
 .header-content {
   display: table-cell;
