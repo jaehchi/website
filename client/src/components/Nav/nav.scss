@@ -6,7 +6,29 @@ $lightBlue: #27b1ae;
 
 /* -- Nav -- */ 
 
-#nav {
-
+.navigation-wrapper {
+  background-color: $lightBlue;
+  width: 100%;
+  float: left;
 }
 
+.navigation {
+  width: 80%;
+}
+
+nav {
+  ul {
+    list-style: none;
+  }
+
+  li {
+
+  }
+  
+  a {
+    color: $white;
+    text-decoration: none;
+    text-transform: uppercase;
+
+  }
+}

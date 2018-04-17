@@ -16,7 +16,7 @@ const Header = () => {
                     <h3>SOFTWARE ENGINEER / UX &amp; UI ENTHUSIAST</h3>
                   </div>
                   <a href="" className="btn">About Me</a>
-                  <a href="" className="btn-resume"><i class="fas fa-poo"></i> Download Resume</a>
+                  <a href="" className="btn-resume"><i className="fas fa-poo"></i> Download Resume</a>
                 </div>  
               </div>
             </div>
