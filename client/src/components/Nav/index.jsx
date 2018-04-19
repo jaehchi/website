@@ -7,20 +7,49 @@ class Nav extends Component {
   constructor() {
     super()
 
+    this.state = {
+      nav: null,
+      topOfNav: null,
+    }
+
   }
 
-  componentDidMount () {
-    window.addEventListener('scroll', this.handleScroll.bind(this), true);
+  componentDidMount() {
+    this.getNav();
+    window.addEventListener('scroll', this.handleScroll.bind(this));
   }
 
-  handleScroll (e) {
-    
+  handleScroll(e) {
+
+    window.scrollY >= this.state.topOfNav ?
+      (
+        document.body.style.paddingTop = `${this.state.paddingOffset}px`,
+        this.state.nav.classList.add('sticky-nav')
+      ) :
+      (
+        document.body.style.paddingTop = 0,
+        this.state.nav.classList.remove('sticky-nav')
+      )
+
   }
 
-  render () {
+  getNav() {
+
+    const nav = document.querySelector('#navbar');
+
+    this.setState({
+      nav,
+      topOfNav: nav.offsetTop,
+      paddingOffset: nav.offsetHeight
+    });
+
+  }
+
+
+  render() {
 
     return (
-      <div className="navigation-wrapper">
+      <div className="navigation-wrapper" id="navbar">
         <div className="navigation container">
           <nav>
             <div className="container">
@@ -42,7 +71,7 @@ class Nav extends Component {
                 </ul>
 
                 <div className="nav-logo">
-                  <a href=""><img src={logo}/></a>
+                  <a href=""><img src={logo} /></a>
                 </div>
               </div>
 

@@ -19,23 +19,11 @@ class App extends Component {
       <div>
         <Header/>
         <Nav/>
-        {/* <About/> */}
+        <About/>
         {/* <Tech/> */}
         {/* <Portfolio/> */}
         {/* <Footer/> */}
-        <div>
-          Hey
-        </div>
-        <div>
-          Hey
-        </div>
-        <div>
-          Hey
-        </div>
-        <div>
-          Hey
-        </div>
-        
+      
       </div>
     );
   }
