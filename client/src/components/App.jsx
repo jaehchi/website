@@ -23,6 +23,19 @@ class App extends Component {
         {/* <Tech/> */}
         {/* <Portfolio/> */}
         {/* <Footer/> */}
+        <div>
+          Hey
+        </div>
+        <div>
+          Hey
+        </div>
+        <div>
+          Hey
+        </div>
+        <div>
+          Hey
+        </div>
+        
       </div>
     );
   }

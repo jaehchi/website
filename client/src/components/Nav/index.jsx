@@ -1,35 +1,57 @@
-import React from 'react';
+import React, { Component } from 'react';
 
 import './nav.scss';
+import logo from './logo.png';
 
-const Nav = () => {
-  return (
-    <div className="navigation-wrapper">
-      <div className="navigation container">
-        <nav>
-          <div className="">
-            <a href="">Jaehyun Chi</a>
-          </div>
-          
-          <ul>
-            <li>
-              <a href="">About Me</a>
-            </li>
-            <li>
-              <a href="">Portfolio</a>
-            </li>
-            <li>
-              <a href="">Tech</a>
-            </li>
-            <li>
-              <a href="">Contact Me</a>
-            </li>
+class Nav extends Component {
+  constructor() {
+    super()
 
-          </ul>
-        </nav>
+  }
+
+  componentDidMount () {
+    window.addEventListener('scroll', this.handleScroll.bind(this), true);
+  }
+
+  handleScroll (e) {
+    
+  }
+
+  render () {
+
+    return (
+      <div className="navigation-wrapper">
+        <div className="navigation container">
+          <nav>
+            <div className="container">
+
+              <div className="nav-menu">
+                <ul className="nav navbar navbar-right">
+                  <li>
+                    <a href="">About Me</a>
+                  </li>
+                  <li>
+                    <a href="">Portfolio</a>
+                  </li>
+                  <li>
+                    <a href="">Tech</a>
+                  </li>
+                  <li>
+                    <a href="">Contact Me</a>
+                  </li>
+                </ul>
+
+                <div className="nav-logo">
+                  <a href=""><img src={logo}/></a>
+                </div>
+              </div>
+
+            </div>
+          </nav>
+        </div>
       </div>
-    </div>
-  );
+    )
+  }
 }
 
 export default Nav;

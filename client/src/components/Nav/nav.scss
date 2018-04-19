@@ -1,34 +1,93 @@
+/* -- Imports -- */ 
+
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+
 /* -- Variables -- */ 
 
 $white: #FFF;
 $lightBlue: #27b1ae;
+$darkBlue: #173248;
+$sexyBeige: #ffe5b0;
 
 
 /* -- Nav -- */ 
 
+
 .navigation-wrapper {
-  background-color: $lightBlue;
+  background-color: $darkBlue;
   width: 100%;
   float: left;
+  position: relative;
 }
 
 .navigation {
-  width: 80%;
+  width: 90%;
+  margin: 0;
 }
 
-nav {
-  ul {
-    list-style: none;
-  }
+.nav-menu {
+  width: 100%;
+  margin: 0;
+  display: table;
+}
 
-  li {
+.nav-logo {
+  float: left;
+  margin: auto 0;
+  padding-top: 6px;
 
-  }
-  
   a {
-    color: $white;
-    text-decoration: none;
-    text-transform: uppercase;
+    img {
+      width: 150px;
+    }
 
   }
+
+}
+
+.navbar {
+  padding: 15px 0;
+  list-style: none;
+  position: relative;
+
+  
+  li {
+    display: inline-block;
+    padding-right: .6em;
+  }
+
+  a {
+      position: relative;
+      color: $white;
+      text-decoration: none;
+      text-transform: uppercase;
+      padding: 1em 1em;
+      display: block;
+      font-size: .6em;
+      letter-spacing: 0.08em;
+      line-height: .75em;
+      font-weight: 100;
+      font-family: 'Raleway','Open Sans', Arial, sans-serif;
+      margin: auto;
+      transition: padding 0.2s linear;
+      border: .75px solid $white;
+    }
+  
+    a:hover {
+      color: $sexyBeige;
+    }
+}
+
+.navbar-right {
+  float: right!important;
+}
+
+.nav {
+  padding: 18px 0;
+}
+
+.sticky-nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
 }
