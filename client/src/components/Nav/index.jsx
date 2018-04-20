@@ -46,8 +46,6 @@ class Nav extends Component {
   active (e) {
     e.preventDefault();
 
-    console.log(e.target.name)
-
     !this.state.active ? 
     (
       e.target.className = 'active',
@@ -58,7 +56,6 @@ class Nav extends Component {
       e.target.className = 'active',
       this.state.active = e.target
     )
-
   }
 
   render() {
