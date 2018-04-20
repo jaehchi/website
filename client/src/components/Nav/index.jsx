@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
-import './nav.scss';
 import logo from './logo.png';
+import './nav.scss';
 
 class Nav extends Component {
   constructor() {
@@ -10,8 +10,10 @@ class Nav extends Component {
     this.state = {
       nav: null,
       topOfNav: null,
+      active: null,
     }
 
+    this.active = this.active.bind(this);
   }
 
   componentDidMount() {
@@ -20,7 +22,6 @@ class Nav extends Component {
   }
 
   handleScroll(e) {
-
     window.scrollY >= this.state.topOfNav ?
       (
         document.body.style.paddingTop = `${this.state.paddingOffset}px`,
@@ -30,11 +31,9 @@ class Nav extends Component {
         document.body.style.paddingTop = 0,
         this.state.nav.classList.remove('sticky-nav')
       )
-
   }
 
   getNav() {
-
     const nav = document.querySelector('#navbar');
 
     this.setState({
@@ -42,12 +41,27 @@ class Nav extends Component {
       topOfNav: nav.offsetTop,
       paddingOffset: nav.offsetHeight
     });
+  }
+
+  active (e) {
+    e.preventDefault();
+
+    console.log(e.target.name)
+
+    !this.state.active ? 
+    (
+      e.target.className = 'active',
+      this.state.active = e.target
+    ) : 
+    (
+      this.state.active.className = '',
+      e.target.className = 'active',
+      this.state.active = e.target
+    )
 
   }
 
-
   render() {
-
     return (
       <div className="navigation-wrapper" id="navbar">
         <div className="navigation container">
@@ -57,16 +71,16 @@ class Nav extends Component {
               <div className="nav-menu">
                 <ul className="nav navbar navbar-right">
                   <li>
-                    <a href="">About Me</a>
+                    <a href="" name="about" onClick={this.active}>About Me</a>
                   </li>
                   <li>
-                    <a href="">Portfolio</a>
+                    <a href="" name="portfolio" onClick={this.active}>Portfolio</a>
                   </li>
                   <li>
-                    <a href="">Tech</a>
+                    <a href="" name="tech" onClick={this.active}>Tech</a>
                   </li>
                   <li>
-                    <a href="">Contact Me</a>
+                    <a href="" name="contact" onClick={this.active}>Contact Me</a>
                   </li>
                 </ul>
 

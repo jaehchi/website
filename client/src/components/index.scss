@@ -54,7 +54,7 @@ body {
   overflow: auto;
 }
 
-a {
+a, a:after, a:before {
   -webkit-transition: all 0.1s linear;
   -moz-transition: all 0.1s linear;
   transition: all 0.1s linear;

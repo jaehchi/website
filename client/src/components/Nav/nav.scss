@@ -34,7 +34,7 @@ $sexyBeige: #ffe5b0;
 .nav-logo {
   float: left;
   margin: auto 0;
-  padding-top: 6px;
+  padding: 3px 0;
 
   a {
     img {
@@ -70,13 +70,32 @@ $sexyBeige: #ffe5b0;
       font-family: 'Raleway','Open Sans', Arial, sans-serif;
       margin: auto;
       transition: padding 0.2s linear;
-      border: .75px solid $white;
+      // border: .75px solid $white;
     }
   
-    a:hover {
-      color: $sexyBeige;
-    }
+  a:hover {
+    color: $sexyBeige;
+  }
+
+  a:after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 0%;
+    content: '.';
+    color: transparent;
+    background: $sexyBeige;
+    height: .25px;
+  }
+  
+  a:hover:after {
+    width: 100%;
+  }
+  
 }
+
 
 .navbar-right {
   float: right!important;
@@ -91,3 +110,10 @@ $sexyBeige: #ffe5b0;
   top: 0;
   width: 100%;
 }
+
+
+.active {
+  border-bottom: .25px solid $sexyBeige;
+}
+
+
