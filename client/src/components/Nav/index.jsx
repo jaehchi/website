@@ -11,9 +11,12 @@ class Nav extends Component {
       nav: null,
       topOfNav: null,
       active: null,
+      activeElem: null,
+      activeElemClasses: null,
     }
 
-    this.active = this.active.bind(this);
+    this.isActive = this.isActive.bind(this);
+    this.getCurrentElement = this.getCurrentElement.bind(this)
   }
 
   componentDidMount() {
@@ -22,6 +25,8 @@ class Nav extends Component {
   }
 
   handleScroll(e) {
+
+
     window.scrollY >= this.state.topOfNav ?
       (
         document.body.style.paddingTop = `${this.state.paddingOffset}px`,
@@ -31,7 +36,38 @@ class Nav extends Component {
         document.body.style.paddingTop = 0,
         this.state.nav.classList.remove('sticky-nav')
       )
+      const element = document.querySelector('#about');
+      const elem = document.querySelector('#portfolio');
+
+
+        var rect = element.getBoundingClientRect();
+        var elemTop = rect.top;
+        var elemBottom = rect.bottom;
+
+        const aboutTop = 648;
+        const reachesBot = -604;
+
+        const YatBot = 1252;
+
+      // console.log('window Y: ', window.scrollY);
+      // console.log(elemTop)
+      // console.log( aboutTop <= window.scrollY && window.scrollY <= YatBot);
+        // Only completely visible elements return true:
+        var isVisible = (elemTop >= 0) && (elemBottom >= window.innerHeight);
+        // Partially visible elements return true:
+        //isVisible = elemTop < window.innerHeight && elemBottom >= 0;
+        // return isVisible;
+    
+    
+    // console.log(element);
+    // console.log(isScrolledIntoView(element));
+
   }
+
+  getCurrentElement(elem) {
+
+  }
+
 
   getNav() {
     const nav = document.querySelector('#navbar');
@@ -43,19 +79,32 @@ class Nav extends Component {
     });
   }
 
-  active (e) {
-    e.preventDefault();
+  isActive(e) {
+    // e.preventDefault(); 
+    // e.stopPropangation();
+    // let elem = e.target.getAttribute('href');
+    // let currentElem = eleme.slice( 1, element.length );
 
-    !this.state.active ? 
-    (
-      e.target.className = 'active',
-      this.state.active = e.target
-    ) : 
-    (
-      this.state.active.className = '',
-      e.target.className = 'active',
-      this.state.active = e.target
-    )
+    // const activeElement = document.getElementById(elem);
+
+  
+
+    // activeElement.className += ' activated';
+
+    // console.log(activeElement.className)
+
+    !this.state.active ?
+      (
+        e.target.className = 'active',
+        this.state.active = e.target
+      ) :
+      (
+        this.state.active.className = '',
+        e.target.className = 'active',
+        this.state.active = e.target
+      )
+
+
   }
 
   render() {
@@ -68,21 +117,21 @@ class Nav extends Component {
               <div className="nav-menu">
                 <ul className="nav navbar navbar-right">
                   <li>
-                    <a href="" name="about" onClick={this.active}>About Me</a>
+                    <a href="#about" onClick={this.isActive}>About Me</a>
                   </li>
                   <li>
-                    <a href="" name="portfolio" onClick={this.active}>Portfolio</a>
+                    <a href="#portfolio" onClick={this.isActive}>Portfolio</a>
                   </li>
                   <li>
-                    <a href="" name="tech" onClick={this.active}>Tech</a>
+                    <a href="#tech" onClick={this.isActive}>Tech</a>
                   </li>
                   <li>
-                    <a href="" name="contact" onClick={this.active}>Contact Me</a>
+                    <a href="#contact" onClick={this.isActive}>Contact Me</a>
                   </li>
                 </ul>
 
                 <div className="nav-logo">
-                  <a href=""><img src={logo} /></a>
+                  <a href="#" onClick={this.isActive}><img src={logo} /></a>
                 </div>
               </div>
 

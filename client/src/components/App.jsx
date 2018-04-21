@@ -4,7 +4,7 @@ import Header from './Header';
 import Nav from './Nav';
 import About from './About';
 import Tech from './Tech';
-import Porfolio from './Portfolio';
+import Portfolio from './Portfolio';
 import Footer from './Footer';
 
 import './index.scss';
@@ -21,7 +21,7 @@ class App extends Component {
         <Nav/>
         <About/>
         {/* <Tech/> */}
-        {/* <Portfolio/> */}
+        <Portfolio/>
         {/* <Footer/> */}
       
       </div>
