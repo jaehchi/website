@@ -10,43 +10,12 @@ class About extends Component {
 
   render() {
     return (
-      <div className="about-wrapper" name="about" id="about" >
+      <div className="about-wrapper" name="about" id="about"s >
         <div className="container aboutabout">
-          <div className="aboutaboutabout" >
-            <h1>ABOUT</h1>
-            <p>HELLOW WORLD</p>
-            <p>HELLOW WORLD</p>
-            <p>HELLOW WORLD</p>
-            <p>HELLOW WORLD</p>
-            <p>HELLOW WORLD</p>
-            <p>HELLOW WORLD</p>
-            <p>HELLOW WORLD</p>
-            <p>HELLOW WORLD</p>
-            <p>HELLOW WORLD</p>
-            <p>HELLOW WORLD</p>
-            <p>HELLOW WORLD</p>
-            <p>HELLOW WORLD</p>
-            <p>HELLOW WORLD</p>
-            <p>HELLOW WORLD</p>
-            <p>HELLOW WORLD</p>
-            <p>HELLOW WORLD</p>
-            <p>HELLOW WORLD</p>
-            <p>HELLOW WORLD</p>
-            <p>HELLOW WORLD</p>
-            <p>HELLOW WORLD</p>
-            <p>HELLOW WORLD</p>
-            <p>HELLOW WORLD</p>
-            <p>HELLOW WORLD</p>
-            <p>HELLOW WORLD</p>
-            <p>HELLOW WORLD</p>
-            <p>HELLOW WORLD</p>
-            <p>HELLOW WORLD</p>
-            <p>HELLOW WORLD</p>
-            <p>HELLOW WORLD</p>
-            <p>HELLOW WORLD</p>
-            <p>HELLOW WORLD</p>
-            <p>HELLOW WORLD</p>
-            <p>HELLOW WORLD</p>
+          <div className="" >
+            <h1>A LITTLE ABOUT ME...</h1>
+            
+            <p>asdf</p>
           
           </div>
 
