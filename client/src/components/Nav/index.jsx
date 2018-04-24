@@ -36,24 +36,24 @@ class Nav extends Component {
         document.body.style.paddingTop = 0,
         this.state.nav.classList.remove('sticky-nav')
       )
-      const element = document.querySelector('#about');
-      const elem = document.querySelector('#portfolio');
+      // const element = document.querySelector('#about');
+      // const elem = document.querySelector('#portfolio');
 
 
-        var rect = element.getBoundingClientRect();
-        var elemTop = rect.top;
-        var elemBottom = rect.bottom;
+      //   var rect = element.getBoundingClientRect();
+      //   var elemTop = rect.top;
+      //   var elemBottom = rect.bottom;
 
-        const aboutTop = 648;
-        const reachesBot = -604;
+      //   const aboutTop = 648;
+      //   const reachesBot = -604;
 
-        const YatBot = 1252;
+      //   const YatBot = 1252;
 
       // console.log('window Y: ', window.scrollY);
       // console.log(elemTop)
       // console.log( aboutTop <= window.scrollY && window.scrollY <= YatBot);
         // Only completely visible elements return true:
-        var isVisible = (elemTop >= 0) && (elemBottom >= window.innerHeight);
+        // var isVisible = (elemTop >= 0) && (elemBottom >= window.innerHeight);
         // Partially visible elements return true:
         //isVisible = elemTop < window.innerHeight && elemBottom >= 0;
         // return isVisible;
@@ -120,10 +120,10 @@ class Nav extends Component {
                     <a href="#about" onClick={this.isActive}>About Me</a>
                   </li>
                   <li>
-                    <a href="#portfolio" onClick={this.isActive}>Portfolio</a>
+                    <a href="#skills" onClick={this.isActive}>Skills</a>
                   </li>
                   <li>
-                    <a href="#tech" onClick={this.isActive}>Tech</a>
+                    <a href="#portfolio" onClick={this.isActive}>Portfolio</a>
                   </li>
                   <li>
                     <a href="#contact" onClick={this.isActive}>Contact Me</a>

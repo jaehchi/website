@@ -1,0 +1,98 @@
+/* -- Imports -- */ 
+
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+
+/* -- Variables -- */ 
+
+$white: #FFF;
+$lightBlue: #27b1ae;
+$prettyBlue: #164a75;
+$sexyBeige: #ffe5b0;
+$heavyRed: #fa6b19;
+$black: #000;
+$niceGrey: #edeeef;
+
+/* -- Contact -- */ 
+
+.contact-wrapper {
+  width: 100%;
+  float: left;
+  position: relative;
+  z-index: -1;
+  background-color: $prettyBlue;
+} 
+
+.contact-container {
+  padding: 0 10%;
+  position: relative;
+  color: $white;
+  font-family: 'Raleway','Open Sans', Arial, sans-serif;
+}
+
+.contact-heading {
+  padding-top: 10%;
+  
+
+  .line-center-contact {
+    margin: 0;
+    padding: 0 2%;
+    font-size: 1.5em;
+    text-transform: uppercase;
+    font-weight: 200;
+    background: $prettyBlue;
+    display: inline-block;
+  }
+  
+  h1 {
+    text-align: center;
+    position: relative;
+    z-index: 4;
+  
+  }
+
+  h1:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 30%;
+    right: 30%;
+    border-top: 1px solid $white;
+    z-index: -1;
+  }
+}
+
+.contact-content {
+  font-family: 'Raleway','Open Sans', Arial, sans-serif;
+  text-align: center;
+  padding: 5% 3%;
+  margin: auto 0;
+  text-transform: uppercase;
+  font-size: .75em;
+  color: $white;
+}
+
+.contact-buttons {
+  font-family: 'Raleway','Open Sans', Arial, sans-serif;
+  text-align: center;
+  padding-left: 4%;
+  padding-right: 4%;
+  padding-bottom: 8%;
+
+  a {
+    color: $white;
+    padding: 1% 5%;
+    border: .5px solid $white;
+    border-radius: 0;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    font-size: 1.25em;
+    margin: 2px;
+  }
+
+
+  a:hover {
+    color: $white;
+    border: .5px solid $heavyRed;
+    background-color: $heavyRed;
+  }
+}

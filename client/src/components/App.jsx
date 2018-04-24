@@ -3,8 +3,9 @@ import React, { Component } from 'react';
 import Header from './Header';
 import Nav from './Nav';
 import About from './About';
-import Tech from './Tech';
+import Skills from './Skills';
 import Portfolio from './Portfolio';
+import Contact from './Contact';
 import Footer from './Footer';
 
 import './index.scss';
@@ -20,9 +21,10 @@ class App extends Component {
         <Header/>
         <Nav/>
         <About/>
-        {/* <Tech/> */}
+        {/* <Skills/> */}
         <Portfolio/>
-        {/* <Footer/> */}
+        <Contact/>
+        <Footer/>
       
       </div>
     );

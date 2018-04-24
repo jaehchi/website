@@ -1,0 +1,52 @@
+/* -- Imports -- */ 
+
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+
+/* -- Variables -- */ 
+
+$nicegrey: #edeeef;
+$black: #000;
+$white: #FFF;
+$lightBlue: #27b1ae;
+$darkBlue: #173248;
+$sexyBeige: #ffe5b0;
+$heavyRed: #fa6b19;
+
+/* -- Footer -- */ 
+
+.footer-wrapper {
+  width: 100%;
+  float: left;
+  position: relative;
+  z-index: -1;
+  margin: auto 0;
+}
+
+.footer-container{
+  padding: 2% 10%;
+  background-color: $darkBlue;
+}
+
+.footer-contents {
+  padding: 1% 0;
+  a {
+    padding: 1% 1%;
+    color: $white;
+  }
+
+  a:hover {
+    color: $lightBlue;
+    background-color: $white;
+  }
+  
+}
+
+.copyright {
+  float:right;
+  font-size: .5em;
+  font-family: 'Raleway','Open Sans', Arial, sans-serif;
+  text-transform: uppercase;
+  color: $white;
+  line-height: 1em;
+  margin-top: 1%;
+}
