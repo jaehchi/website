@@ -6,8 +6,6 @@ class Contact extends Component {
     super(props);
   }
 
-
-
   render() {
     return (
       <div className="contact-wrapper" name="contact" id="contact">

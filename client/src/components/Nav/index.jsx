@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import 'smoothscroll';
 
 import logo from './logo.png';
 import './nav.scss';
@@ -131,7 +132,7 @@ class Nav extends Component {
                 </ul>
 
                 <div className="nav-logo">
-                  <a href="#" onClick={this.isActive}><img src={logo} /></a>
+                  <a href="#header" onClick={this.isActive}><img src={logo} /></a>
                 </div>
               </div>
 
