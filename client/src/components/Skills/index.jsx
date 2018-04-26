@@ -18,26 +18,22 @@ class Skills extends Component {
 
 
     this.state = {
-      reacthover: false
+      react: false
     }
 
     this.onHover = this.onHover.bind(this);
+    this.onHoverLeave = this.onHoverLeave.bind(this);
   }
 
-  onHover(e) {
-    e.preventDefault();
-    console.log(e.target.id)
-
+  onHover(target) {
     this.setState({
-      [ e.target.id ]:  true
+      [target]: true
     })
-
-    console.log(this.state)
   }
 
-  onHoverLeave (e){
+  onHoverLeave (target){
     this.setState({
-      [ e.target.id ]: false
+      [target]: false
     })
   }
 
@@ -48,30 +44,25 @@ class Skills extends Component {
       <div className="skills-wrapper" name="skills" id="skills">
         <div className="container">
           <div className="skills-content">
-            <div>
-              {!this.state.reacthover ? <img src={reactlogo} id="reacthover" onMouseLeave={this.onHoverLeave.bind(this)} onMouseOver={this.onHover} /> :
-                <div className="" >
-                  <ChangingProgressbar
-
-                    percentages={[ 0, 55 ]}
-                    stylesForPercentage={(percentage) => {
-                      const alpha = (100 + percentage) / 200;
-                      return {
-                        path: {
-                          stroke: `rgba(62, 152, 199, ${alpha})`,
-                        },
-                      };
-                    }}
-                  />
-
-                </div>
+            <div   onMouseLeave={() => this.onHoverLeave('react')}  onMouseEnter={ () => this.onHover('react')}>
+              {
+                !this.state.react ?  <img src={reactlogo} /> : 
+                
+                <ChangingProgressbar
+                percentages={[0, 20, 40, 60, 80, 100]}
+                value="react" 
+                stylesForPercentage={(percentage) => {
+                  const alpha = (100 + percentage) / 200;
+                  return {
+                    path: {
+                      stroke: `rgba(62, 152, 199, ${alpha})`,
+                    },
+                  };
+                }}
+              />
               }
-
+   
             </div>
-
-
-
-
           </div>
         </div>
       </div>
