@@ -20,29 +20,34 @@ $heavyRed: #fa6b19;
   position: relative;
   z-index: -1;
   margin: auto 0;
-}
-
-.footer-container{
-  padding: 2% 10%;
   background-color: $darkBlue;
 }
 
+.footer-container{
+  margin: 20px;
+  padding: 0 10%;
+}
+
 .footer-contents {
-  padding: 1% 0;
+  text-align: center;
+  padding: 0 0;
+  
   a {
-    padding: 1% 1%;
+    font-size: 30px;
+    padding: 10px;
     color: $white;
   }
 
   a:hover {
     color: $lightBlue;
-    background-color: $white;
+    // background-color: $white;
   }
   
 }
 
 .copyright {
-  float:right;
+  // float:right;
+  padding-top: 10px;
   font-size: .5em;
   font-family: 'Raleway','Open Sans', Arial, sans-serif;
   text-transform: uppercase;

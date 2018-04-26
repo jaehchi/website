@@ -43,8 +43,12 @@ module.exports = {
       },
       {
         test: /\.(pdf|gif|png|jpe?g)$/,
-        loader: 'file-loader',
+        loader: "file-loader?name=/public/icons/[name].[ext]"
       },
+      {
+        test: /\.svg(\?v=\d+\.\d+\.\d+)?$/,
+        loader: "url-loader?limit=1000000&mimetype=image/svg+xml"
+      }
     ]
   },
   resolve: {

@@ -1,0 +1,30 @@
+
+/* -- Imports -- */ 
+
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+
+/* -- Variables -- */ 
+
+$niceGrey: #edeeef;
+$black: #000;
+$white: #FFF;
+
+/* -- About -- */ 
+
+
+.skills-wrapper {
+  width: 100%;
+  float: left;
+  position: relative;
+  z-index: -1;
+}
+
+.skills-content {
+  padding : 10%;
+  width: 33%;
+}
+
+.reactlogo {
+
+  background: url('../../../public/images/react.svg') 50% 50% no-repeat
+}

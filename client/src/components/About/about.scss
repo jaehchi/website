@@ -16,7 +16,7 @@ $white: #FFF;
   width: 100%;
   float: left;
   position: relative;
-  z-index: -1;
+  z-index: -2;
 }
 
 .about-container {
@@ -30,16 +30,9 @@ $white: #FFF;
   padding-top: 10%;
   padding-bottom: 5%;
 
-  .line-center-funfacts {
-    margin: 0;
-    padding:0 10px;
-    text-transform: uppercase;
-    background: $niceGrey;
-    display: inline-block;
-  }
-
   .line-center-hobbies {
     margin: 0;
+    font-size: 1.5em;
     padding:0 10px;
     background: $niceGrey;
     display: inline-block;
@@ -47,6 +40,7 @@ $white: #FFF;
 
   .line-center-about-me {
     margin: 0;
+    font-size: 1.5em;
     padding:0 10px;
     background: $white;
     display: inline-block;
@@ -68,31 +62,16 @@ $white: #FFF;
     z-index: -1;
   }
 }
-/* -- Fun Facts -- */ 
-
-.funfacts {
-  background-color: $niceGrey;
-  vertical-align: middle;
-  // text-transform: uppercase;
-  text-align: center;
-
-}
-
-.about-funfacts {
-  padding: 8% 10%;
-}
-
-.funfacts-content {
-  background-color: $niceGrey;
-  padding: 0 10%;
-  padding-bottom: 8%;
-}
 
 /* -- Hobbies -- */ 
 
-.hobbies {
-  padding: 5% 0;
+.about-hobbies {
+  padding-top: 20px;
+  padding-bottom: 1px;
   background-color: $niceGrey;
+}
+.hobbies {
+  padding: 7% 0;
   vertical-align: middle;
   text-transform: uppercase;
   text-align: center;
@@ -102,30 +81,62 @@ $white: #FFF;
 /* -- About Me -- */ 
 
 .about-me {
-  padding: 7% 0;
+  padding: 7% 2%;
+  padding-bottom: 20px;
   background-color: $white;
-  text-transform: uppercase;
+  // text-transform: uppercase;
 }
 
 .about-me-content {
-  padding-bottom: 2%;
+  // font-size: 1.5em;
+  position: relative;
+  float: left;
+  padding-bottom: 10%;
+}
+
+.about-me-profile {
+  padding: 0 20px;
+  // float: left;
+  text-align: center;
+  // width: 40%;
+
+  img {
+    padding: 20px;
+    border-radius: 50% 50%;
+    width: 200px;
+  }
 }
 
 .about-me-text {
-  font-size: .75em;
+  // width: 40%;
+  // float: right;
+  // position: relative;
+  // margin: 20px;
+  text-align: center;
+  padding: 0 8%;
+  font-size: 1em;
+  letter-spacing: 1px;
 }
 
 .about-photos {
   width: 100%;
+  height: 100%;
 }
 
-.asdf {
+.image-tint {
   width: 100%;
-  height:20%;
+  -webkit-filter: grayscale(100%);
+
   img {
     float: left;
-    width: 33.33%;
-    height: 175px;
+    width: 25%;
+    height: 200px;
+    z-index: -1;
   }
 
+
+}
+
+.image-tint:hover  {
+  filter: none;
 }

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import 'smoothscroll';
 
-import logo from './logo.png';
+import logo from '../../../public/images/logo.png';
 import './nav.scss';
 
 class Nav extends Component {
@@ -12,12 +12,9 @@ class Nav extends Component {
       nav: null,
       topOfNav: null,
       active: null,
-      activeElem: null,
-      activeElemClasses: null,
     }
 
     this.isActive = this.isActive.bind(this);
-    this.getCurrentElement = this.getCurrentElement.bind(this)
   }
 
   componentDidMount() {
@@ -26,7 +23,6 @@ class Nav extends Component {
   }
 
   handleScroll(e) {
-
 
     window.scrollY >= this.state.topOfNav ?
       (
@@ -37,75 +33,32 @@ class Nav extends Component {
         document.body.style.paddingTop = 0,
         this.state.nav.classList.remove('sticky-nav')
       )
-      // const element = document.querySelector('#about');
-      // const elem = document.querySelector('#portfolio');
-
-
-      //   var rect = element.getBoundingClientRect();
-      //   var elemTop = rect.top;
-      //   var elemBottom = rect.bottom;
-
-      //   const aboutTop = 648;
-      //   const reachesBot = -604;
-
-      //   const YatBot = 1252;
-
-      // console.log('window Y: ', window.scrollY);
-      // console.log(elemTop)
-      // console.log( aboutTop <= window.scrollY && window.scrollY <= YatBot);
-        // Only completely visible elements return true:
-        // var isVisible = (elemTop >= 0) && (elemBottom >= window.innerHeight);
-        // Partially visible elements return true:
-        //isVisible = elemTop < window.innerHeight && elemBottom >= 0;
-        // return isVisible;
+      
+    }
     
-    
-    // console.log(element);
-    // console.log(isScrolledIntoView(element));
-
-  }
-
-  getCurrentElement(elem) {
-
-  }
-
 
   getNav() {
     const nav = document.querySelector('#navbar');
-
+    
     this.setState({
       nav,
       topOfNav: nav.offsetTop,
       paddingOffset: nav.offsetHeight
     });
   }
-
-  isActive(e) {
-    // e.preventDefault(); 
-    // e.stopPropangation();
-    // let elem = e.target.getAttribute('href');
-    // let currentElem = eleme.slice( 1, element.length );
-
-    // const activeElement = document.getElementById(elem);
-
   
-
-    // activeElement.className += ' activated';
-
-    // console.log(activeElement.className)
-
+  isActive(e) {
     !this.state.active ?
-      (
-        e.target.className = 'active',
-        this.state.active = e.target
-      ) :
-      (
-        this.state.active.className = '',
-        e.target.className = 'active',
-        this.state.active = e.target
-      )
-
-
+    (
+      
+      e.target.className = 'active',
+      this.state.active = e.target
+    ) :
+    (
+      this.state.active.className = '',
+      e.target.className = 'active',
+      this.state.active = e.target
+    )
   }
 
   render() {
@@ -145,3 +98,32 @@ class Nav extends Component {
 }
 
 export default Nav;
+
+
+
+
+// const element = document.querySelector('#about');
+        // const elem = document.querySelector('#portfolio');
+    
+    
+        //   var rect = element.getBoundingClientRect();
+        //   var elemTop = rect.top;
+        //   var elemBottom = rect.bottom;
+    
+        //   const aboutTop = 648;
+        //   const reachesBot = -604;
+    
+        //   const YatBot = 1252;
+    
+        // console.log('window Y: ', window.scrollY);
+        // console.log(elemTop)
+        // console.log( aboutTop <= window.scrollY && window.scrollY <= YatBot);
+          // Only completely visible elements return true:
+          // var isVisible = (elemTop >= 0) && (elemBottom >= window.innerHeight);
+          // Partially visible elements return true:
+          //isVisible = elemTop < window.innerHeight && elemBottom >= 0;
+          // return isVisible;
+      
+      
+      // console.log(element);
+      // console.log(isScrolledIntoView(element));

@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 
-import logo from './logo.png';
 import './footer.scss';
 class Footer extends Component {
   constructor(props) {
