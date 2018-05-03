@@ -21,7 +21,7 @@ class About extends Component {
   render() {
     // excuse my ugly faces, im that talented
     return (
-      <div className="about-wrapper" name="about" id="about" >
+      <div className="about-wrapper section" name="about" id="about" >
         <div className="about-container">
           <div className="about-me">
             <div className="about-heading about-me">

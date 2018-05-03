@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import 'smoothscroll';
+import { each } from 'lodash';
 
 import logo from '../../../public/images/logo.png';
 import './nav.scss';
@@ -10,10 +11,13 @@ class Nav extends Component {
 
     this.state = {
       nav: null,
+      navList: null,
       topOfNav: null,
-      active: null,
+      paddingOffset: null,
+      sections: null,
     }
 
+    this.getNav = this.getNav.bind(this);
     this.isActive = this.isActive.bind(this);
   }
 
@@ -33,52 +37,64 @@ class Nav extends Component {
         document.body.style.paddingTop = 0,
         this.state.nav.classList.remove('sticky')
       )
-
+      
+    this.isActive();
   }
 
   getNav() {
-    const nav = document.querySelector('#navbar');
+    const nav = document.querySelector('#nagivation');
+    const sections = document.getElementsByClassName('section');
+    const navList = {};
+    let temp = document.getElementsByClassName('navbar')[0].childNodes;
+    
 
+    for ( var i = 0; i < temp.length; i++ ) {
+      let item = temp[i].children[0].attributes[0].value.slice(1)
+      if ( navList[item] === undefined ) {
+        navList[item] = temp[i].children[0]
+      }
+    }
+    
     this.setState({
       nav,
+      navList,
+      sections,
       topOfNav: nav.offsetTop,
       paddingOffset: nav.offsetHeight
     });
   }
 
-  isActive(e) {
-    !this.state.active ?
-      (
-        e.target.className = 'active',
-        this.state.active = e.target
-      ) :
-      (
-        this.state.active.className = '',
-        e.target.className = 'active',
-        this.state.active = e.target
-      )
+  isActive () {
+    each( this.state.sections, section => {
+      if ( window.scrollY >= section.offsetTop - 20 && window.scrollY <= section.offsetTop + section.offsetHeight ) {
+        this.state.navList[section.getAttribute('name')].classList.add('active')
+      } else {
+        this.state.navList[section.getAttribute('name')].classList.remove('active')
+      }
+    });
   }
+
 
   render() {
     return (
-      <div className="navigation" id="navbar">
+      <div className="navigation" id="nagivation">
 
         <div className="nav-logo">
-          <a href="#header" onClick={this.isActive}><img src={logo} /></a>
+          <a href="#header"><img src={logo} /></a>
         </div>
         
         <ul className="navbar">
           <li>
-            <a href="#about" onClick={this.isActive}>About Me</a>
+            <a href="#about">About Me</a>
           </li>
           <li>
-            <a href="#skills" onClick={this.isActive}>Skills</a>
+            <a href="#skills">Skills</a>
           </li>
           <li>
-            <a href="#portfolio" onClick={this.isActive}>Portfolio</a>
+            <a href="#portfolio">Portfolio</a>
           </li>
           <li>
-            <a href="#contact" onClick={this.isActive}>Contact Me</a>
+            <a href="#contact">Contact Me</a>
           </li>
         </ul>
 

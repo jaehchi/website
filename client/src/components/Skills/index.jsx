@@ -40,7 +40,7 @@ class Skills extends Component {
   render() {
 
     return (
-      <div className="skills-wrapper" name="skills" id="skills">
+      <div className="skills-wrapper section" name="skills" id="skills">
         <div className="container">
           <div className="skills-content">
             <div   onMouseLeave={() => this.onHoverLeave('react')}  onMouseEnter={ () => this.onHover('react')}>
