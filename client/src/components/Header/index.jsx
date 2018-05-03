@@ -2,25 +2,20 @@ import React from 'react';
 
 import './header.scss';
 
+
 const Header = () => {
   return (
     <header id="header">
-      <div className="header-image">
-        <div className="header-bg">
-          <div className="header-content">
-            <div className="header-container">
-              <div className="content-centering">
-                <div className="text-centering">
-                  <h1 className="">JAE H. CHI</h1>
-                  <div className="header-text">
-                    <h3>SOFTWARE ENGINEER / UX &amp; UI ENTHUSIAST</h3>
-                  </div>
-                  <a href="#about" className="btn">About Me</a>
-                  <a href="" className="btn-resume"><i className="fas fa-poo"></i> Download Resume</a>
-                </div>  
-              </div>
-            </div>
-          </div>
+      <div className="header">
+        <div className="name">
+          <h1>JAE H. CHI</h1>
+        </div>
+        <div className="position">
+          <h3>SOFTWARE ENGINEER / UX &amp; UI ENTHUSIAST</h3>
+        </div>
+        <div className="btn">
+          <a href="#about">About Me</a>
+          <a href="" className="btn btn-resume"><i className="fas fa-poo"></i> Download Resume</a>
         </div>
       </div>
     </header>

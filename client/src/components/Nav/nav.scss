@@ -20,6 +20,7 @@ $heavyRed: #fa6b19;
   width: 100%;
   
   background: $darkBlue;
+  font-family: 'Raleway','Open Sans', Arial, sans-serif;
 
   display: -webkit-box;
   display: -moz-box;
@@ -134,7 +135,7 @@ $heavyRed: #fa6b19;
 
 /* -- Small Screens -- */ 
 
-@media all and (max-width: 500px) {
+@media all and (max-width: 420px) {
   .navigation {
 
     flex-direction: column;
@@ -155,5 +156,10 @@ $heavyRed: #fa6b19;
       }
     }
 
+  }
+
+  .sticky {
+    top: auto;
+    position: relative;
   }
 }

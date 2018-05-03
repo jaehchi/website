@@ -1,14 +1,6 @@
 /* -- Imports -- */ 
 
-@import url('https://fonts.googleapis.com/css?family=Raleway');
-
-/* -- Variables -- */ 
-
-$white: #FFF;
-$lightBlue: #27b1ae;
-$darkBlue: #173248;
-$ohjayYellow:  #feda3c;
-
+@import '../Globals/global.scss';
 
 /* -- Footer -- */ 
 
@@ -62,9 +54,32 @@ $ohjayYellow:  #feda3c;
   text-transform: uppercase;
 }
 
-/* -- Medium -- */ 
+/* -- Mobile -- */ 
 
-@media all and (max-width: 800px) {
+@include media('<=phone') { 
+  
+  .footer {
+    padding: 20px; 
+
+    .social {
+      flex-direction: column;
+      align-items: center;
+      a {
+        font-size: 30px;
+        padding: 10px
+      }
+    }
+
+    .copyright {
+      font-size: 10px;
+    }
+  }
+}
+
+/* -- Small Screens -- */ 
+
+@include media(">phone", "<tablet") { 
+
   .footer {
     .social {
       a {
@@ -73,25 +88,40 @@ $ohjayYellow:  #feda3c;
     }
 
     .copyright {
-      font-size: 7px;
+      font-size: 10px;
     }
   }
+
 }
 
-/* -- Small Screens -- */ 
+/* -- Medium Screens -- */ 
 
-@media all and (max-width: 500px) {
-
+@include media(">tablet", "<desktop") {
   .footer {
     .social {
       a {
-        font-size: 15px;
+        font-size: 30px;
       }
     }
 
     .copyright {
-      font-size: 7px;
+      font-size: 10px;
     }
   }
+}
 
+/* -- Large Screens -- */ 
+
+@include media(">desktop") {
+  .footer {
+    .social {
+      a {
+        font-size: 30px;
+      }
+    }
+
+    .copyright {
+      font-size: 10px;
+    }
+  }
 }

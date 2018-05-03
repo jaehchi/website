@@ -1,50 +1,60 @@
 /* -- Imports -- */ 
 
-@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+@import '../Globals/global.scss';
 
-/* -- Variables -- */ 
+/* -- Header -- */ 
 
-$white: #FFF;
-$lightBlue: #27b1ae;
-
-/* -- header -- */ 
-
-#header {
-  height: 100%;
+.header {
   width: 100%;
-  
-  h1, h2, h3, h4, h5, h6, p, a {
-    color: $white;
-    font-family: 'Open Sans', Arial, sans-serif;
-  }
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 
-  h1 {
-    margin-bottom: 0.4em;
-    font-weight: 600;
-    font-size: 2.9em;
-    letter-spacing: 0.05em;
-    line-height: 1.1em;
-    padding-bottom: 22px;
-    border-bottom: .75px solid $white;
-    width: 52%;
-    margin: 0 auto 20px auto;
-  }
+  color: $white;
+  font-family: 'Open Sans', Arial, sans-serif;
 
-  h3 {
-    font-size: 1em;
-    line-height: 1.35em;
-    font-weight: lighter;
-  }
+  background: linear-gradient(
+    rgba(0, 0, 0, 0.5),
+    rgba(0, 0, 0, 0.5)
+    ), url('../../../public/images/header-bg.jpg') 50% 50% no-repeat;
+  background-size: cover;
+    
+  z-index: -1;
+}
+
+.name {
+  display: flex;
+  justify-content: center;
+  width: 50%;
+
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  line-height: 1.1em;
+  padding-bottom: 22px;
+  border-bottom: .75px solid $white;
+
+
+  z-index: 1;
+}
+
+.position {
+  padding: 20px 0;
+  letter-spacing: 0.05em;
+}
+
+.btn {
+  display: flex;
+  padding: 20px; 
 
   a {
-    padding: 7px 15px;
     border: .75px solid $white;
-    border-radius: 0;
-    -webkit-border-radius: 0;
-    -moz-border-radius: 0;
-    font-size: .75em;
-    margin-right: 5px;
-    margin-bottom: 5px;
+    padding: 8px 10px; 
+    margin: 2px;
+
+    color: $white;
+    font-size: 10px;
     text-decoration: none;
     text-transform: uppercase;
   }
@@ -55,73 +65,58 @@ $lightBlue: #27b1ae;
   }
 }
 
-.header-image {
-  position: relative;
-  overflow: hidden;
-  width: 100%;
-}
-
-.header-bg {
-  margin: auto;
-  height: 100%;
-  width: 100%;
-  background: linear-gradient(
-    rgba(0, 0, 0, 0.5),
-    rgba(0, 0, 0, 0.5)
-  ), url('../../../public/images/header-bg.jpg') 50% 50% no-repeat;
-  background-size: cover;
-  display: table;
-  opacity: 1;
-  float:left;
-  min-height: 100vh;
-  // position: absolulte;
-  z-index: 4;
-}
-
-
-
-.header-content {
-  display: table-cell;
-  vertical-align: middle;
-  z-index: 6;
-  position: relative;
-}
-
-.header-container {
-  margin-right: auto;
-  margin-left: auto;
-  padding-left: 1.2em;
-  padding-right: 1.2em;
-}
-
-.content-centering {
-  float: none;
-  margin: 0 auto 0 auto;
-  position: relative;
-  min-height: 1px;
-  padding-left: 5%;
-  padding-right: 5%;
-}
-
-.text-centering {
-  margin: 0 auto 0 auto;
-  width: 100%;
-  text-align: center;
-}
-
-.header-text {
-  margin-bottom: 40px;
-}
-
 .btn-resume {
   background-color: $lightBlue;
+
+  i {
+    padding-right: 2px;
+  }
 }
 
-a.btn-resume:hover {
-  color: $lightBlue;
-  background-color: $white;
+
+/* -- Mobile -- */ 
+
+@include media("<phone") { 
+  .name {
+    font-size: 20px;
+  }
+
+  .position {
+    font-size: 8px;
+  }
 }
 
-.fas{
-  padding-right: 5px;
+/* -- Small Screens -- */ 
+
+@include media(">phone", "<tablet") { 
+  .name {
+    font-size: 30px;
+  }
+
+  .position {
+    font-size: 12px;
+  }
+}
+
+/* -- Medium Screens -- */ 
+
+@include media(">tablet", "<desktop") {
+  .name {
+    font-size: 45px;
+  }
+
+  .position {
+    font-size: 15px;
+  }
+}
+/* -- Large Screens -- */ 
+
+@include media(">desktop") {
+  .name {
+    font-size: 50px;
+  }
+
+  .position {
+    font-size: 18px;
+  }
 }

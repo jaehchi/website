@@ -11,6 +11,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "include-media": "^1.4.9",
     "react": "^16.3.1",
     "react-circular-progressbar": "^0.8.0",
     "react-dom": "^16.3.1",
