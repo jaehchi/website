@@ -61,91 +61,30 @@ class Nav extends Component {
 
   render() {
     return (
-      <div className="navigation-wrapper" id="navbar">
-        {/* <div className="navigation container">
-          <nav>
-            <div className="container">
+      <div className="navigation" id="navbar">
 
-              <div className="nav-menu">
-                <ul className="nav navbar navbar-right">
-                  <li>
-                    <a href="#about" onClick={this.isActive}>About Me</a>
-                  </li>
-                  <li>
-                    <a href="#skills" onClick={this.isActive}>Skills</a>
-                  </li>
-                  <li>
-                    <a href="#portfolio" onClick={this.isActive}>Portfolio</a>
-                  </li>
-                  <li>
-                    <a href="#contact" onClick={this.isActive}>Contact Me</a>
-                  </li>
-                </ul>
-
-                <div className="nav-logo">
-                  <a href="#header" onClick={this.isActive}><img src={logo} /></a>
-                </div>
-              </div>
-
-            </div>
-          </nav>
-        </div> */}
-
-
-          <div className="navigation">
-            <div className="nav-logo">
-              <a href="#header" onClick={this.isActive}><img src={logo} /></a>
-            </div>
-            
-            <ul className="navbar">
-              <li>
-                <a href="#about" onClick={this.isActive}>About Me</a>
-              </li>
-              <li>
-                <a href="#skills" onClick={this.isActive}>Skills</a>
-              </li>
-              <li>
-                <a href="#portfolio" onClick={this.isActive}>Portfolio</a>
-              </li>
-              <li>
-                <a href="#contact" onClick={this.isActive}>Contact Me</a>
-              </li>
-            </ul>
-
-          </div>
+        <div className="nav-logo">
+          <a href="#header" onClick={this.isActive}><img src={logo} /></a>
         </div>
+        
+        <ul className="navbar">
+          <li>
+            <a href="#about" onClick={this.isActive}>About Me</a>
+          </li>
+          <li>
+            <a href="#skills" onClick={this.isActive}>Skills</a>
+          </li>
+          <li>
+            <a href="#portfolio" onClick={this.isActive}>Portfolio</a>
+          </li>
+          <li>
+            <a href="#contact" onClick={this.isActive}>Contact Me</a>
+          </li>
+        </ul>
 
+      </div>
     )
   }
 }
 
 export default Nav;
-
-
-
-
-// const element = document.querySelector('#about');
-        // const elem = document.querySelector('#portfolio');
-
-
-        //   var rect = element.getBoundingClientRect();
-        //   var elemTop = rect.top;
-        //   var elemBottom = rect.bottom;
-
-        //   const aboutTop = 648;
-        //   const reachesBot = -604;
-
-        //   const YatBot = 1252;
-
-        // console.log('window Y: ', window.scrollY);
-        // console.log(elemTop)
-        // console.log( aboutTop <= window.scrollY && window.scrollY <= YatBot);
-          // Only completely visible elements return true:
-          // var isVisible = (elemTop >= 0) && (elemBottom >= window.innerHeight);
-          // Partially visible elements return true:
-          //isVisible = elemTop < window.innerHeight && elemBottom >= 0;
-          // return isVisible;
-
-
-      // console.log(element);
-      // console.log(isScrolledIntoView(element));

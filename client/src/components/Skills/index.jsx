@@ -39,7 +39,6 @@ class Skills extends Component {
 
   render() {
 
-    console.log(this.state)
     return (
       <div className="skills-wrapper" name="skills" id="skills">
         <div className="container">
