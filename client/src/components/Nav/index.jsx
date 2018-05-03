@@ -17,73 +17,75 @@ class Nav extends Component {
       sections: null,
     }
 
-    this.getNav = this.getNav.bind(this);
+    this.getNavAndSections = this.getNavAndSections.bind(this);
     this.isActive = this.isActive.bind(this);
   }
 
   componentDidMount() {
-    this.getNav();
+    this.getNavAndSections();
     window.addEventListener('scroll', this.handleScroll.bind(this));
   }
 
   handleScroll(e) {
-
     window.scrollY >= this.state.topOfNav ?
       (
-        // document.body.style.paddingTop = `${this.state.paddingOffset}px`,
+        document.body.style.paddingTop = `${this.state.paddingOffset}px`,
         this.state.nav.classList.add('sticky')
       ) :
       (
-        // document.body.style.paddingTop = 0,
+        document.body.style.paddingTop = 0,
         this.state.nav.classList.remove('sticky')
       )
-      
+
     this.isActive();
   }
 
-  getNav() {
-    const nav = document.querySelector('#nagivation');
+  getNavAndSections() {
+    const nav = document.querySelector('#navigation');
     const sections = document.getElementsByClassName('section');
     const navList = {};
 
-    let temp = document.getElementsByClassName('navbar')[0].childNodes;
-    
-    for ( var i = 0; i < temp.length; i++ ) {
-      let item = temp[i].children[0].attributes[0].value.slice(1);
-      if ( navList[item] === undefined ) {
-        navList[item] = temp[i].children[0]
+    let temp = document.getElementsByClassName('navbar')[ 0 ].childNodes;
+
+    for (var i = 0; i < temp.length; i++) {
+      let item = temp[ i ].children[ 0 ].attributes[ 0 ].value.slice(1);
+      if (navList[ item ] === undefined) {
+        navList[ item ] = temp[ i ].children[ 0 ]
       }
     }
-    
+
     this.setState({
       nav,
       navList,
       sections,
       topOfNav: nav.offsetTop,
-      // paddingOffset: nav.offsetHeight
+      paddingOffset: nav.offsetHeight
     });
   }
 
-  isActive () {
-    each( this.state.sections, section => {
-      console.log(window.scrollY,  section.offsetTop, section.offsetHeight + section.offsetTop)
-      if ( window.scrollY >= section.offsetTop && window.scrollY < section.offsetHeight + section.offsetTop ) {
-        this.state.navList[section.getAttribute('name')].classList.add('active')
-      } else {
-        this.state.navList[section.getAttribute('name')].classList.remove('active')
+  // navigation tracking
+  
+  isActive() {
+    each(this.state.sections, section => {
+      window.scrollY >= section.offsetTop - this.state.paddingOffset && 
+      window.scrollY < section.offsetHeight + section.offsetTop - this.state.paddingOffset 
+      ?
+        this.state.navList[ section.getAttribute('name') ].classList.add('active')
+      :
+        this.state.navList[ section.getAttribute('name') ].classList.remove('active')
       }
-    });
+    );
   }
 
 
   render() {
     return (
-      <div className="navigation" id="nagivation">
+      <div className="navigation" id="navigation">
 
         <div className="nav-logo">
           <a href="#header"><img src={logo} /></a>
         </div>
-        
+
         <ul className="navbar">
           <li>
             <a href="#about">About Me</a>
