@@ -27,44 +27,42 @@ class Nav extends Component {
     window.scrollY >= this.state.topOfNav ?
       (
         document.body.style.paddingTop = `${this.state.paddingOffset}px`,
-        this.state.nav.classList.add('sticky-nav')
+        this.state.nav.classList.add('sticky')
       ) :
       (
         document.body.style.paddingTop = 0,
-        this.state.nav.classList.remove('sticky-nav')
+        this.state.nav.classList.remove('sticky')
       )
-      
-    }
-    
+
+  }
 
   getNav() {
     const nav = document.querySelector('#navbar');
-    
+
     this.setState({
       nav,
       topOfNav: nav.offsetTop,
       paddingOffset: nav.offsetHeight
     });
   }
-  
+
   isActive(e) {
     !this.state.active ?
-    (
-      
-      e.target.className = 'active',
-      this.state.active = e.target
-    ) :
-    (
-      this.state.active.className = '',
-      e.target.className = 'active',
-      this.state.active = e.target
-    )
+      (
+        e.target.className = 'active',
+        this.state.active = e.target
+      ) :
+      (
+        this.state.active.className = '',
+        e.target.className = 'active',
+        this.state.active = e.target
+      )
   }
 
   render() {
     return (
       <div className="navigation-wrapper" id="navbar">
-        <div className="navigation container">
+        {/* <div className="navigation container">
           <nav>
             <div className="container">
 
@@ -91,8 +89,32 @@ class Nav extends Component {
 
             </div>
           </nav>
+        </div> */}
+
+
+          <div className="navigation">
+            <div className="nav-logo">
+              <a href="#header" onClick={this.isActive}><img src={logo} /></a>
+            </div>
+            
+            <ul className="navbar">
+              <li>
+                <a href="#about" onClick={this.isActive}>About Me</a>
+              </li>
+              <li>
+                <a href="#skills" onClick={this.isActive}>Skills</a>
+              </li>
+              <li>
+                <a href="#portfolio" onClick={this.isActive}>Portfolio</a>
+              </li>
+              <li>
+                <a href="#contact" onClick={this.isActive}>Contact Me</a>
+              </li>
+            </ul>
+
+          </div>
         </div>
-      </div>
+
     )
   }
 }
@@ -104,17 +126,17 @@ export default Nav;
 
 // const element = document.querySelector('#about');
         // const elem = document.querySelector('#portfolio');
-    
-    
+
+
         //   var rect = element.getBoundingClientRect();
         //   var elemTop = rect.top;
         //   var elemBottom = rect.bottom;
-    
+
         //   const aboutTop = 648;
         //   const reachesBot = -604;
-    
+
         //   const YatBot = 1252;
-    
+
         // console.log('window Y: ', window.scrollY);
         // console.log(elemTop)
         // console.log( aboutTop <= window.scrollY && window.scrollY <= YatBot);
@@ -123,7 +145,7 @@ export default Nav;
           // Partially visible elements return true:
           //isVisible = elemTop < window.innerHeight && elemBottom >= 0;
           // return isVisible;
-      
-      
+
+
       // console.log(element);
       // console.log(isScrolledIntoView(element));
