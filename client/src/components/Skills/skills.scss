@@ -1,34 +1,177 @@
 
 /* -- Imports -- */ 
 
-@import url('https://fonts.googleapis.com/css?family=Raleway');
+@import '../Globals/global.scss';
 
-/* -- Variables -- */ 
+/* -- Skills -- */ 
 
-$niceGrey: #edeeef;
-$black: #000;
-$white: #FFF;
-
-/* -- About -- */ 
-
-
-.skills-wrapper {
+.skills {
   width: 100%;
-  float: left;
+  padding: 30px 0;
+  padding-bottom: 50px;
+  display: flex;
+  margin: auto;
   position: relative;
-  z-index: -1;
+  
+  font-family: 'Open Sans', Arial, sans-serif;
+  background: $heavyRed;
+  color: $white;
+
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+
+  -webkit-flex-flow: row wrap;
+  justify-content: space-around;
 }
 
 .skills-content {
-  padding : 10%;
-  width: 10%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  
+  padding: 40px 50px;
+  
+  p {
+    width: 60%;
+    font-size: 12px;
+    line-height: 1.5em;
+  }
 }
 
-.reactlogo {
-
-  background: url('../../../public/images/react.svg') 50% 50% no-repeat
+.title-skills {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    padding-bottom: 20px;
+    width: 100%;
+    
+    h1 {
+      display: flex;
+      justify-content: center;
+      
+      width: 60%;
+      border-bottom: .75px solid $white;
+  
+      font-size: 30px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      line-height: 1.1em;
+      padding-bottom: 15px;
+    }
 }
 
-.asdf {
-  height: 500px;
+.tech-grid {
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+
+.tech-grid-item {
+  width: 150px;
+  height: 150px;
+  padding: 15px;
+}
+
+
+/* -- Circular Progress Bar -- */ 
+
+.CircularProgressbar .CircularProgressbar-background {
+  fill: $heavyRed;
+}
+
+.CircularProgressbar.CircularProgressbar-inverted .CircularProgressbar-text {
+  fill: #fff;
+}
+
+.CircularProgressbar .CircularProgressbar-path {
+  stroke: $white;
+  stroke-linecap: round;
+  transition: stroke-dashoffset 0.5s ease 0s;
+}
+
+.CircularProgressbar .CircularProgressbar-text {
+  fill: #FFF;
+  font-size: 20px;
+  dominant-baseline: middle;
+  text-anchor: middle;
+}
+
+.CircularProgressbar .CircularProgressbar-trail {
+  stroke: $darkBlue;
+}
+
+
+
+/* -- Mobile -- */ 
+
+@include media('<=phone') { 
+  .title-skills {
+    padding-bottom: 20px;
+    width: 100%;
+    
+    h1 {
+      width: 100%; 
+    }
+  }
+
+  .skills-content {
+    padding: 40px 50px;
+    
+    p {
+      font-size: 15px;
+      width: 100%;
+    }
+  }
+}
+
+/* -- Small Screens -- */ 
+
+@include media(">phone", "<tablet") { 
+
+  .title-skills {
+    padding-bottom: 20px;
+    width: 100%;
+    
+    h1 {
+      width: 90%; 
+    }
+  }
+
+  .skills-content {
+    padding: 40px 50px;
+    
+    p {
+      font-size: 15px;
+      width: 90%;
+    }
+  }
+
+}
+
+/* -- Medium Screens -- */ 
+
+@include media(">tablet", "<desktop") {
+  .title-skills {
+    padding-bottom: 20px;
+    width: 100%;
+    
+    h1 {
+      width: 80%; 
+    }
+  }
+
+  .skills-content {
+    padding: 40px 50px;
+    
+    p {
+      width: 80%;
+    }
+  }
 }

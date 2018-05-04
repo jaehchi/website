@@ -15,11 +15,11 @@ class ChangingProgressbar extends Component {
   }
 
   componentDidMount() {
-    // setInterval(() => {
-    //   this.setState({
-    //     currentPercentageIndex: (this.state.currentPercentageIndex + 1) % this.props.percentages.length
-    //   });
-    // }, this.props.interval);
+    setInterval(() => {
+      this.setState({
+        currentPercentageIndex: (this.state.currentPercentageIndex + 1) % this.props.percentages.length
+      });
+    }, this.props.interval);
 
     this.setState({
       currentPercentageIndex: (this.state.currentPercentageIndex + 1 ) % this.props.percentages.length
@@ -37,7 +37,6 @@ class ChangingProgressbar extends Component {
   }
 
   render() {
-    console.log(this.props);
     return (
       <CircularProgressbar
         {...this.props}
