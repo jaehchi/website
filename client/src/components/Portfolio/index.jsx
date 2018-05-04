@@ -9,8 +9,8 @@ class Portfolio extends Component {
 
   render() {
     return (
-      <div className="portfolio-wrapper" name="portfolio" id="portfolio">
-        Hey from Portfolio
+      <div className="portfolio section" name="portfolio" id="portfolio">
+        yo
       </div>
     );
   }

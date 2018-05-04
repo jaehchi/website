@@ -41,13 +41,13 @@ table {
 
 html {
   height: 100%;
+  // overflow: auto;
 }
 
 body {
   height: 100%;
   width: 100%;
   overflow: auto;
-
 }
 
 a, a:after, a:before {
@@ -56,13 +56,16 @@ a, a:after, a:before {
   transition: all .2s linear;
 }
 
-.container {
-  margin-right: auto;
-  margin-left: auto;
-  padding-left: 15px;
-  padding-right: 15px;
+.page {
+  display: flex;
+  flex: wrap;
+  flex-direction: column;
 }
 
+.section {
+  width: 100%;
 
-
-
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

@@ -1,6 +1,9 @@
-.portfolio-wrapper {
+@import '../Globals/global.scss';
+
+/* -- PORTFOLIO --*/
+
+.portfolio {
   width: 100%;
-  float: left;
-  position: relative;
-  z-index: -1;
+  display: flex;
+  background: #EAEDF0;
 }

@@ -8,8 +8,8 @@ class Contact extends Component {
 
   render() {
     return (
-      <div className="contact-wrapper" name="contact" id="contact">
-        <div className="contact-container contact-heading">
+      <div className="section" name="contact" id="contact">
+        {/* <div className="contact-container contact-heading">
           <h1>
             <span className="line-center-contact">Contact Me</span><br/>
           </h1>
@@ -22,7 +22,8 @@ class Contact extends Component {
           <a href="https://linkedin.com/in/jaehchi" className="" target="_blank">
             <i class="fas fa-envelope-square"></i>
           </a>
-        </div>
+        </div> */}
+        yo
       </div>
     );
   }

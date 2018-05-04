@@ -1,15 +1,6 @@
 /* -- Imports -- */ 
 
-@import url('https://fonts.googleapis.com/css?family=Raleway');
-
-/* -- Variables -- */ 
-
-$white: #FFF;
-$lightBlue: #27b1ae;
-$darkBlue: #173248;
-$sexyBeige: #ffe5b0;
-$heavyRed: #fa6b19;
-
+@import '../Globals/global.scss';
 
 /* -- Nav -- */ 
 
@@ -125,7 +116,7 @@ $heavyRed: #fa6b19;
 
 /* -- Medium -- */ 
 
-@media all and (max-width: 800px) {
+@media only screen and (max-width: 800px) {
   .navigation {
     justify-content: space-around;
   }
@@ -133,7 +124,7 @@ $heavyRed: #fa6b19;
 
 /* -- Small Screens -- */ 
 
-@media all and (max-width: 420px) {
+@media only screen and (max-width: 420px) {
   .navigation {
 
     flex-direction: column;
@@ -153,7 +144,6 @@ $heavyRed: #fa6b19;
         margin-bottom: 10px;
       }
     }
-
   }
 
   .sticky {

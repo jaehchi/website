@@ -2,16 +2,12 @@ import React, { Component } from 'react';
 
 import './about.scss';
 
-
 import hiking from '../../../public/images/hiking.jpg';
-import christmas from '../../../public/images/christmas.jpg';
+import guitar from '../../../public/images/guitar.jpg';
 import gravy from '../../../public/images/gravy.jpg';
-import gravy2 from '../../../public/images/gravy2.jpg';
-import icecream from '../../../public/images/icecream.jpg';
 import snowboarding from '../../../public/images/snowboarding.jpg';
 import beach from '../../../public/images/beach.jpg';
 import meandyou from '../../../public/images/meandyou.jpg';
-
 
 class About extends Component {
   constructor(props) {
@@ -19,67 +15,61 @@ class About extends Component {
   }
 
   render() {
-    // excuse my ugly faces, im that talented
+    
     return (
-      <div className="about-wrapper section" name="about" id="about" >
-        <div className="about-container">
-          <div className="about-me">
-            <div className="about-heading about-me">
-              <h1><span className="line-center-about-me">About me</span></h1>
+      <div className="about section" name="about" id="about" >
+        <div className="about-profile">
+          <div className="profile-image">
+            <img src={gravy} alt="" className=""/>
+          </div>
+          <div className="description">
+            <div className="about-title">
+              <h1>About Me</h1>
             </div>
-
-            <div className="container about-me-content">
-              <div className="about-me-profile">
-                <img src={gravy} alt="" className=""/>
-              </div>
-              <div className="about-me-text">
-                <p>I'm a software engineer with a burning passion for problem-solving. Of all the things in this world, nothing satisfies me more than making progress in meaningful work that one day can change the world. </p>
-              </div>
-            </div>
+            <p>
+              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+            </p>
           </div>
         </div>
-
-        <div className="about-wrapper">
-          <div className="about-container about-hobbies">
-            <div className="about-heading hobbies">
-              <h1><span className="line-center-hobbies">a little peek</span></h1>
-            </div>
+        <div className="photo-grid">
+          <div className="photo-grid-items">
+            <img src={gravy} alt="" className=""/>
+          </div>
+          <div className="photo-grid-items">
+            <img src={hiking} alt="" className=""/>
+          </div>
+          <div className="photo-grid-items">
+            <img src={beach} alt="" className=""/>
+          </div>
+          <div className="photo-grid-items">
+            <img src={meandyou} alt="" className=""/>
+          </div>
+          <div className="photo-grid-items">
+            <img src={guitar} alt="" className=""/>
+          </div>
+          <div className="photo-grid-items">
+            <img src={snowboarding} alt="" className=""/>
           </div>
 
-          <div className="about-photos">
-            <div className="image-tint">
-              <img src={gravy}/>
-            </div>
-            <div className="image-tint">
-              <img src={hiking}/>
-            </div>
-            <div className="image-tint">
-              <img src={christmas}/>
-            </div>
-            <div className="image-tint">
-              <img src={beach}/>
-            </div>
-            <div className="image-tint">
-              <img src={snowboarding}/>
-            </div>
-            <div className="image-tint">
-              <img src={meandyou}/>
-            </div>
-            <div className="image-tint">
-              <img src={gravy2}/>
-            </div>
-            <div className="image-tint">
-              <img src={icecream}/>
-            </div>    
+        </div>
+        <div className="about-content">
+          <div className="about-me">
+            <h1>Understand Who I am</h1>
           </div>
-      </div>
-
+          <p>
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+          </p>
+        </div>
       </div>
     );
   }
 }
 
 export default About;
+
+
+
+
 
 
 

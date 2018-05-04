@@ -17,7 +17,7 @@ class App extends Component {
 
   render() {
     return (
-      <div>
+      <div className="page">
         <Header/>
         <Nav/>
         <About/>
@@ -25,7 +25,6 @@ class App extends Component {
         <Portfolio/>
         <Contact/>
         <Footer/>
-      
       </div>
     );
   }
