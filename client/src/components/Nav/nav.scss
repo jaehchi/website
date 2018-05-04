@@ -127,8 +127,10 @@
 @media only screen and (max-width: 420px) {
   .navigation {
 
+ 
     flex-direction: column;
-    
+    height: 250px;
+
     .nav-logo {
       img {
         flex-direction: column;
