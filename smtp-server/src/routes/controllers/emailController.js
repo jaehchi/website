@@ -11,8 +11,8 @@ export const emailController = async (req, res) => {
     sender: `${req.body.name} <${req.body.email}>`,
     replyTo: `${req.body.email}`,
     to: 'jaehchi@gmail.com',
-    subject: `${req.body.subject}`,
-    text: `${req.body.body}`,
+    subject: 'Potential Opportunity!',
+    text: `${req.body.message}`,
     html,
   };
 

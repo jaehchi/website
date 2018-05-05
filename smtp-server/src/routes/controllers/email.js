@@ -1,6 +1,6 @@
-export const email = ({ name, email, body }) => {
+export const email = ({ name, email, message }) => {
   return `
-    <p>${body}</p>
+    <p>${message}</p>
 
     <p>From: ${name}</p>
     <p>${email}</p>

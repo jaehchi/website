@@ -11,6 +11,7 @@
 
   color: $white;
   background: $blue;
+  font-family: 'Open Sans', Arial, sans-serif;
 
   display: -webkit-box;
   display: -moz-box;
@@ -19,30 +20,117 @@
   display: flex;
 
   -webkit-flex-flow: row wrap;
-  justify-content: space-around;
-  // flex-direction: column;
-
-}
-
-.contact-grid {
-  width: 50%;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  flex-wrap: wrap;
-}
-
-.contact-grid-item {
-
-}
-
-.contact-title {
-  padding: 20px;
-  display: flex;
+  justify-content: space-between;
 }
 
 .contact-content {
-  padding: 20px;
   display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  width: 50%;
+  padding: 20px 20px;
+
+  h2 {
+    padding: 0 10px;
+  }
+
+}
+.content-title {
+  display: flex;
+  justify-content: flex-start;
 }
 
+.contact-form {
+  display: flex;
+  flex-direction: column;
+
+  width: 80%;
+  padding: 10px;
+
+  textarea {
+    display: flex;
+    justify-content: flex-start;
+    width: 95%;
+    height: 100px;
+    padding: 10px 10px;
+
+    border: none;
+    color: $white;
+    background-color: $lightBlue;
+  }
+}
+::placeholder {
+  color: $white;
+}
+
+.contact-form-item {
+  display: flex;
+  justify-content: space-between;
+  
+  width: 100%;
+  // padding : 10px 0;
+
+  label {
+    justify-content: flex-start;
+    width: 50%;
+    padding: 12px;
+  }
+
+  input {
+    width: 91%;
+    padding: 8px 8px;
+    color: $white;
+    border: none;
+    background-color: $lightBlue;
+  }
+
+
+  label:first-child {
+    padding-left: 0;
+  }
+
+  label:last-child {
+    padding-right: 0;
+  }
+}
+
+.contact-contacts {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+
+  width: 30%;
+  padding: 20px;
+
+  h2 {
+    padding: 0 20px;
+  }
+  
+}
+
+.contact-grid {
+  justify-content: center;
+  flex-direction: column;
+
+  width: 80%;
+  padding: 10px;
+  
+  // margin-bottom: 100px;
+
+}
+
+.contact-grid-item {
+  justify-content: flex-start;
+  width: 80%;
+  padding: 10px;
+
+  i {
+    display: flex;
+
+    
+    div {
+      padding: 10px;
+    }
+  }
+}
