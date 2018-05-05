@@ -10,7 +10,7 @@ class Portfolio extends Component {
   render() {
     return (
       <div className="portfolio section" name="portfolio" id="portfolio">
-        yo
+        <h1>Portfolio</h1>
       </div>
     );
   }
