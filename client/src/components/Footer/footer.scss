@@ -40,14 +40,15 @@
   }
 
   a:hover {
-    color: $ohjayYellow;
+    color: $heavyRed;
+    background-color: $white;
   }
 }
 
 .copyright {
   display: flex;
   justify-content: center;
-  padding-top: 10px;
+  padding-top: 20px;
   padding-bottom: 25px;
 
   font-size: 10px;

@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start:rest-server": "cd rest-server && npm start",
+    "start:smtp-server": "cd smtp-server && npm start",
     "setup:rest-server": "cd rest-server && npm start",
     "buildEnv": "node bin/buildEnv.js"
   },

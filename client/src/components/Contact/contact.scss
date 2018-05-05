@@ -1,0 +1,48 @@
+/* -- Imports -- */ 
+
+@import '../Globals/global.scss';
+
+/* -- Contact -- */ 
+
+.contact {
+  margin: 0;
+  position: relative;
+  width: 100%;
+
+  color: $white;
+  background: $blue;
+
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+
+  -webkit-flex-flow: row wrap;
+  justify-content: space-around;
+  // flex-direction: column;
+
+}
+
+.contact-grid {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.contact-grid-item {
+
+}
+
+.contact-title {
+  padding: 20px;
+  display: flex;
+}
+
+.contact-content {
+  padding: 20px;
+  display: flex;
+}
+
