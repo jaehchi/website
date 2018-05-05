@@ -21,6 +21,7 @@ class App {
     this.express = express();
     this.mountMiddleWare();
     this.mountRoutes();
+    this.mountErrorHandlers();
   }
 
   mountMiddleWare() {
@@ -29,6 +30,12 @@ class App {
 
   mountRoutes () {
     this.express.use('/api', router);
+  }
+
+  mountErrorHandlers () {
+    this.express.use(( err, req, res, next) => {
+      res.send(err);
+    })
   }
 }
 

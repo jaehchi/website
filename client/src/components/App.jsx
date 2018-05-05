@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Notifications, {notify} from 'react-notify-toast';
 
 import Header from './Header';
 import Nav from './Nav';
@@ -18,6 +19,7 @@ class App extends Component {
   render() {
     return (
       <div className="page">
+        <Notifications/>
         <Header/>
         <Nav/>
         <About/>

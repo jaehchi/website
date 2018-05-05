@@ -8,10 +8,15 @@
   margin: 0;
   position: relative;
   width: 100%;
+  padding: 20px 0;
 
   color: $white;
   background: $blue;
+
   font-family: 'Open Sans', Arial, sans-serif;
+  font-weight: 100;
+  line-height: 1.5em;
+  letter-spacing: .035em;
 
   display: -webkit-box;
   display: -moz-box;
@@ -21,32 +26,38 @@
 
   -webkit-flex-flow: row wrap;
   justify-content: space-between;
+  align-items: flex-start;
+}
+
+.contact-align {
+  display: flex;
+  justify-content: center;
+
+  width: 100%;
+  padding: 40px 0;
 }
 
 .contact-content {
   display: flex;
-  flex-direction: column;
+  align-items: flex-start;
   justify-content: center;
+  flex-direction: column;
 
-  width: 50%;
-  padding: 20px 20px;
-
+  width: 40%;
+  padding: 20px 20px 20px 0;
+  
   h2 {
     padding: 0 10px;
   }
-
-}
-.content-title {
-  display: flex;
-  justify-content: flex-start;
 }
 
 .contact-form {
   display: flex;
   flex-direction: column;
 
-  width: 80%;
+  width: 100%;
   padding: 10px;
+
 
   textarea {
     display: flex;
@@ -57,9 +68,15 @@
 
     border: none;
     color: $white;
-    background-color: $lightBlue;
+    background-color: $darkBlue;
+
+    button:hover {
+      color : $white;
+      background-color: $darkBlue;
+    }
   }
 }
+
 ::placeholder {
   color: $white;
 }
@@ -69,7 +86,6 @@
   justify-content: space-between;
   
   width: 100%;
-  // padding : 10px 0;
 
   label {
     justify-content: flex-start;
@@ -82,9 +98,13 @@
     padding: 8px 8px;
     color: $white;
     border: none;
-    background-color: $lightBlue;
-  }
+    background-color: $darkBlue;
 
+    button:hover {
+      color : $white;
+      background-color: $darkBlue;
+    }
+  }
 
   label:first-child {
     padding-left: 0;
@@ -95,16 +115,29 @@
   }
 }
 
+.label-item {
+  // display: flex;
+  width: 100%;
+  padding: 10px 0;
+
+}
+
+.label-item:last-child {
+  padding-left: 12px;
+}
+
+
 .contact-contacts {
   display: flex;
-  flex-direction: column;
+  align-items: flex-start;
   justify-content: flex-start;
-
-  width: 30%;
-  padding: 20px;
-
+  flex-direction: column;
+  
+  width: 25%;
+  padding: 20px 0 20px 20px;
+  
   h2 {
-    padding: 0 20px;
+    padding: 0 30px;
   }
   
 }
@@ -112,25 +145,145 @@
 .contact-grid {
   justify-content: center;
   flex-direction: column;
-
+  align-items: center;
+  
   width: 80%;
   padding: 10px;
-  
-  // margin-bottom: 100px;
-
 }
 
 .contact-grid-item {
+  display: flex;
   justify-content: flex-start;
-  width: 80%;
+  align-items: center;
+
   padding: 10px;
+  background-color: $blue;
 
-  i {
+  font-size: 10px;
+
+  h4 {
+    padding: 0 10px;
+  }
+
+  img {
+    width: 35px;
+    padding: 0 10px;
+    border-radius: 50%;
+  } 
+}
+
+.requirements {
+  display: flex;
+  // justify-content: center;
+  width: 100%;
+  padding: 12px 10px 3px 10px;
+
+  font-size: 8px;
+  color: $heavyRed;
+}
+
+.required {
+  border: 1px solid $heavyRed!important;
+}
+
+.sendEmail {
+  display: flex;
+  justify-content: flex-end;
+ 
+  padding: 12px 2px;
+  
+  button {
     display: flex;
-
     
-    div {
-      padding: 10px;
+    justify-content: center;
+    align-items: center;
+    
+    border: none;
+    width: 100px;
+    padding: 8px;
+
+    color:$white;
+    background-color: $darkBlue;
+  }
+
+  button:hover {
+    color : $darkBlue;
+    background-color: $white;
+  }
+}
+
+/* -- Mobile -- */ 
+
+@include media('<=phone') { 
+
+  .contact-align {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .contact-contacts {
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+  }
+
+  .contact-grid {
+    justify-content: center;
+    align-items: center;
+  }
+
+  .contact-grid-item {
+    align-items: center;
+    padding: 10px 0;
+  }
+
+  .contact-content {
+    width: 80%;
+    align-items: center;
+    
+    padding: 10px;
+
+    h2 {
+      display: flex;
+    }
+  }
+}
+
+/* -- Small Screens -- */ 
+
+@include media(">phone", "<tablet") { 
+
+  .contact-align {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .contact-contacts {
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+  }
+
+  .contact-grid {
+    justify-content: center;
+    align-items: center;
+  }
+
+  .contact-grid-item {
+    align-items: center;
+    padding: 10px 0;
+  }
+
+  .contact-content {
+    width: 80%;
+    align-items: center;
+    
+    padding: 10px;
+
+    h2 {
+      display: flex;
     }
   }
 }
