@@ -19,8 +19,6 @@ class Contact extends Component {
       errorMessages: null
     }
 
-    // this.show = notify.createShowQueue();
-
     this.onChange = this.onChange.bind(this);
     this.onSubmit = this.onSubmit.bind(this);
     this.onError = this.onError.bind(this);
@@ -49,8 +47,6 @@ class Contact extends Component {
       // console.log(err)
     }
 
-    console.log(data)
-
     data.data.errors ? this.onError(data.data.errors) : (
       toast.success(`  🚀  The message is on it's way!`, {
         position: "bottom-right",
@@ -62,9 +58,7 @@ class Contact extends Component {
       }), this.setState({
         errorMessages: {}
       })
-
     )
-
 
   }
 
@@ -81,6 +75,10 @@ class Contact extends Component {
 
       if (message === 'email') {
         errorMessages[ name ] = `${name} must be a valid email adresss.`
+      }
+
+      if ( message === ' long') {
+        errorMessages[ name ] = `${name} must be at least 3 characters long.`
       }
     }
 
