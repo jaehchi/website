@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import ChangingProgressbar from './ChangingProgressbar';
+
+import Skill from './Skill';
 
 import react from '../../../public/images/react.svg';
 import angular from '../../../public/images/angular.svg';
@@ -19,7 +20,6 @@ import './skills.scss';
 class Skills extends Component {
   constructor(props) {
     super(props);
-
 
     this.state = {
       javascript: false,
@@ -53,7 +53,6 @@ class Skills extends Component {
   }
 
   render() {
-
     return (
       <div className="skills section" name="skills" id="skills">
         <div className="skills-content">
@@ -70,180 +69,144 @@ class Skills extends Component {
             onMouseLeave={() => this.onHoverLeave('javascript')}
             onMouseEnter={() => this.onHover('javascript')}
           >
-            {
-              !this.state.javascript ?
-                <img src={javascript} /> :
-                <ChangingProgressbar
-                  percentages={[ 0, 60 ]}
-                  value="javascript"
-                  background
-                />
-            }
+            <Skill
+              hovered={this.state.javascript}
+              img={javascript}
+              name={'javascript'}
+              percentages={[ 0, 62 ]}
+            />
           </div>
           <div
-            className='tech-grid-item' 
-            onMouseLeave={() => this.onHoverLeave('react')} 
+            className='tech-grid-item'
+            onMouseLeave={() => this.onHoverLeave('react')}
             onMouseEnter={() => this.onHover('react')}
           >
-            {
-              !this.state.react ?
-                <img src={react} /> :
-                <ChangingProgressbar
-                  percentages={[ 0, 77 ]}
-                  value="react"
-                  background
-                />
-            }
+            <Skill
+              hovered={this.state.react}
+              img={react}
+              name={'react'}
+              percentages={[ 0, 77 ]}
+            />
           </div>
-          <div 
-            className='tech-grid-item' 
-            onMouseLeave={() => this.onHoverLeave('redux')} 
+          <div
+            className='tech-grid-item'
+            onMouseLeave={() => this.onHoverLeave('redux')}
             onMouseEnter={() => this.onHover('redux')}
           >
-            {
-              !this.state.redux ?
-                <img src={redux} /> :
-                <ChangingProgressbar
-                  percentages={[ 0, 50 ]}
-                  value="redux"
-                  background
-                />
-            }
+            <Skill
+              hovered={this.state.redux}
+              img={redux}
+              name={'redux'}
+              percentages={[ 0, 51 ]}
+            />
           </div>
-          <div 
-            className='tech-grid-item' 
-            onMouseLeave={() => this.onHoverLeave('angular')} 
+          <div
+            className='tech-grid-item'
+            onMouseLeave={() => this.onHoverLeave('angular')}
             onMouseEnter={() => this.onHover('angular')}
           >
-            {
-              !this.state.angular ?
-                <img src={angular} /> :
-                <ChangingProgressbar
-                  percentages={[ 0, 53 ]}
-                  value="angular"
-                  background
-                />
-            }
+            <Skill
+              hovered={this.state.angular}
+              img={angular}
+              name={'angular'}
+              percentages={[ 0, 53 ]}
+            />
           </div>
-          <div 
-            className='tech-grid-item' 
-            onMouseLeave={() => this.onHoverLeave('webpack')} 
+          <div
+            className='tech-grid-item'
+            onMouseLeave={() => this.onHoverLeave('webpack')}
             onMouseEnter={() => this.onHover('webpack')}
           >
-            {
-              !this.state.webpack ?
-                <img src={webpack} /> :
-                <ChangingProgressbar
-                  percentages={[ 0, 67 ]}
-                  value="webpack"
-                  background
-                />
-            }
+            <Skill
+              hovered={this.state.webpack}
+              img={webpack}
+              name={'webpack'}
+              percentages={[ 0, 67 ]}
+            />
           </div>
-          <div 
-            className='tech-grid-item' 
-            onMouseLeave={() => this.onHoverLeave('css3')} 
+          <div
+            className='tech-grid-item'
+            onMouseLeave={() => this.onHoverLeave('css3')}
             onMouseEnter={() => this.onHover('css3')}
           >
-            {
-              !this.state.css3 ?
-                <img src={css3} /> :
-                <ChangingProgressbar
-                  percentages={[ 0, 65 ]}
-                  value="css3"
-                  background
-                />
-            }
+            <Skill
+              hovered={this.state.css3}
+              img={css3}
+              name={'css3'}
+              percentages={[ 0, 65 ]}
+            />
           </div>
-          <div 
-            className='tech-grid-item' 
-            onMouseLeave={() => this.onHoverLeave('html5')} 
+          <div
+            className='tech-grid-item'
+            onMouseLeave={() => this.onHoverLeave('html5')}
             onMouseEnter={() => this.onHover('html5')}
           >
-            {
-              !this.state.html5 ?
-                <img src={html5} /> :
-                <ChangingProgressbar
-                  percentages={[ 0, 71 ]}
-                  value="html5"
-                  background
-                />
-            }
+            <Skill
+              hovered={this.state.html5}
+              img={html5}
+              name={'html5'}
+              percentages={[ 0, 71 ]}
+            />
           </div>
-          <div 
-            className='tech-grid-item' 
-            onMouseLeave={() => this.onHoverLeave('sass')} 
+          <div
+            className='tech-grid-item'
+            onMouseLeave={() => this.onHoverLeave('sass')}
             onMouseEnter={() => this.onHover('sass')}
           >
-            {
-              !this.state.sass ?
-                <img src={sass} /> :
-                <ChangingProgressbar
-                  percentages={[ 0, 47 ]}
-                  value="sass"
-                  background
-                />
-            }
+            <Skill
+              hovered={this.state.sass}
+              img={sass}
+              name={'sass'}
+              percentages={[ 0, 48 ]}
+            />
           </div>
-          <div 
-            className='tech-grid-item' 
-            onMouseLeave={() => this.onHoverLeave('nodejs')} 
+          <div
+            className='tech-grid-item'
+            onMouseLeave={() => this.onHoverLeave('nodejs')}
             onMouseEnter={() => this.onHover('nodejs')}
           >
-            {
-              !this.state.nodejs ?
-                <img src={nodejs} /> :
-                <ChangingProgressbar
-                  percentages={[ 0, 62 ]}
-                  value="nodejs"
-                  background
-                />
-            }
+            <Skill
+              hovered={this.state.nodejs}
+              img={nodejs}
+              name={'nodejs'}
+              percentages={[ 0, 63 ]}
+            />
           </div>
-          <div 
-            className='tech-grid-item' 
-            onMouseLeave={() => this.onHoverLeave('postgresql')} 
+          <div
+            className='tech-grid-item'
+            onMouseLeave={() => this.onHoverLeave('postgresql')}
             onMouseEnter={() => this.onHover('postgresql')}
           >
-            {
-              !this.state.postgresql ?
-                <img src={postgresql} /> :
-                <ChangingProgressbar
-                  percentages={[ 0, 52 ]}
-                  value="postgresql"
-                  background
-                />
-            }
+            <Skill
+              hovered={this.state.postgresql}
+              img={postgresql}
+              name={'postgresql'}
+              percentages={[ 0, 52 ]}
+            />
           </div>
-          <div 
-            className='tech-grid-item' 
-            onMouseLeave={() => this.onHoverLeave('mongodb')} 
+          <div
+            className='tech-grid-item'
+            onMouseLeave={() => this.onHoverLeave('mongodb')}
             onMouseEnter={() => this.onHover('mongodb')}
           >
-            {
-              !this.state.mongodb ?
-                <img src={mongodb} /> :
-                <ChangingProgressbar
-                  percentages={[ 0, 51 ]}
-                  value="mongodb"
-                  background
-                />
-            }
+            <Skill
+              hovered={this.state.mongodb}
+              img={mongodb}
+              name={'mongodb'}
+              percentages={[ 0, 51 ]}
+            />
           </div>
-          <div 
-            className='tech-grid-item' 
-            onMouseLeave={() => this.onHoverLeave('git')} 
+          <div
+            className='tech-grid-item'
+            onMouseLeave={() => this.onHoverLeave('git')}
             onMouseEnter={() => this.onHover('git')}
           >
-            {
-              !this.state.git ?
-                <img src={git} /> :
-                <ChangingProgressbar
-                  percentages={[ 0, 78 ]}
-                  value="git"
-                  background
-                />
-            }
+            <Skill
+              hovered={this.state.git}
+              img={git}
+              name={'git'}
+              percentages={[ 0, 78 ]}
+            />
           </div>
 
         </div>

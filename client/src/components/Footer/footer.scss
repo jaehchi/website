@@ -32,8 +32,12 @@
   justify-content: center;
   padding-top: 25px;
 
+  li {
+    padding: 5px;
+  }
+
   a {
-    padding: 10px;
+    padding: 4px 6px;
 
     color: $white;
     font-size: 30px;
@@ -43,12 +47,16 @@
     color: $heavyRed;
     background-color: $white;
   }
+
+  i::before {
+    padding: 0;
+  }
 }
 
 .copyright {
   display: flex;
   justify-content: center;
-  padding-top: 20px;
+  padding-top: 10px;
   padding-bottom: 25px;
 
   font-size: 10px;
