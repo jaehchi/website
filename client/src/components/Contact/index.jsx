@@ -53,12 +53,13 @@ class Contact extends Component {
         autoClose: 5000,
         hideProgressBar: false,
         closeOnClick: true,
+        draggablePercent: 60,
         pauseOnHover: true,
         draggable: true,
       }), this.setState({
         errorMessages: {}
       })
-    )
+    );
 
   }
 
@@ -77,7 +78,7 @@ class Contact extends Component {
         errorMessages[ name ] = `${name} must be a valid email adresss.`
       }
 
-      if ( message === ' long') {
+      if (message === ' long') {
         errorMessages[ name ] = `${name} must be at least 3 characters long.`
       }
     }
@@ -199,7 +200,18 @@ class Contact extends Component {
             </form>
           </div>
         </div>
-          <ToastContainer/>
+        <ToastContainer
+          position="bottom-right"
+          autoClose={5000}
+          hideProgressBar={false}
+          newestOnTop={false}
+          closeOnClick
+          rtl={false}
+          pauseOnVisibilityChange
+          draggable
+          draggablePercent={60}
+          pauseOnHover
+        />
       </div>
     );
   }

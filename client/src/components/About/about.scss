@@ -29,8 +29,8 @@
   display: flex;
   justify-content: space-around;
   width: 75%;
-  padding: 0 50px;
-  padding-bottom: 40px;
+  padding: 40px 50px;
+  padding-bottom: 80px;
 }
 
 .profile-image {
@@ -115,7 +115,7 @@
   align-items: center;
   flex-direction: column;
 
-  padding: 40px 50px;
+  padding: 80px 50px;
 
   p {
     width: 60%;
