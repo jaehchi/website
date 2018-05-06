@@ -15,7 +15,7 @@ class ChangingProgressbar extends Component {
   }
 
   componentDidMount() {
-    setInterval(() => {
+    this.progress = setInterval(() => {
       this.setState({
         currentPercentageIndex: (this.state.currentPercentageIndex + 1) % this.props.percentages.length
       });
@@ -24,6 +24,10 @@ class ChangingProgressbar extends Component {
     this.setState({
       currentPercentageIndex: (this.state.currentPercentageIndex + 1 ) % this.props.percentages.length
     })
+  }
+
+  componentWillUnmount () {
+    clearInterval(this.progress);
   }
 
   getStyles() {
