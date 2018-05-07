@@ -116,13 +116,19 @@
   flex-direction: column;
 
   padding: 50px 50px 70px 50px;
+  
+}
+
+.about-me-description {
+  display: flex;
+  justify-content: center;
 
   p {
+    text-align: center;
     width: 60%;
     font-size: 12px;
     line-height: 1.5em;
   }
-  
 }
 
 .about-me {

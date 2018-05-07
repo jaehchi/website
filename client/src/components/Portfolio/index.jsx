@@ -10,7 +10,22 @@ class Portfolio extends Component {
   render() {
     return (
       <div className="portfolio section" name="portfolio" id="portfolio">
-        <h1>Portfolio</h1>
+        <div className="portfolio-content">
+          <div className="title-portfolio">
+            <h1>Portfolio</h1>
+          </div>
+        </div>
+        <div className="portfolio-grid">
+          <div className="portfolio-grid-item">
+          hey
+          </div>
+          <div className="portfolio-grid-item">
+          hey
+          </div>
+          <div className="portfolio-grid-item">
+          hey
+          </div>
+        </div>
       </div>
     );
   }
