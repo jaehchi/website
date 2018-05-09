@@ -66,150 +66,154 @@ class Skills extends Component {
           
           </div>
         </div>
-        <div className="tech-grid" >
-          <div
-            className='tech-grid-item'
-            onMouseLeave={() => this.onHoverLeave('javascript')}
-            onMouseEnter={() => this.onHover('javascript')}
-          >
-            <Skill
-              hovered={this.state.javascript}
-              img={javascript}
-              name={'javascript'}
-              percentages={[ 0, 62 ]}
-            />
-          </div>
-          <div
-            className='tech-grid-item'
-            onMouseLeave={() => this.onHoverLeave('react')}
-            onMouseEnter={() => this.onHover('react')}
-          >
-            <Skill
-              hovered={this.state.react}
-              img={react}
-              name={'react'}
-              percentages={[ 0, 77 ]}
-            />
-          </div>
-          <div
-            className='tech-grid-item'
-            onMouseLeave={() => this.onHoverLeave('redux')}
-            onMouseEnter={() => this.onHover('redux')}
-          >
-            <Skill
-              hovered={this.state.redux}
-              img={redux}
-              name={'redux'}
-              percentages={[ 0, 51 ]}
-            />
-          </div>
-          <div
-            className='tech-grid-item'
-            onMouseLeave={() => this.onHoverLeave('angular')}
-            onMouseEnter={() => this.onHover('angular')}
-          >
-            <Skill
-              hovered={this.state.angular}
-              img={angular}
-              name={'angular'}
-              percentages={[ 0, 53 ]}
-            />
-          </div>
-          <div
-            className='tech-grid-item'
-            onMouseLeave={() => this.onHoverLeave('webpack')}
-            onMouseEnter={() => this.onHover('webpack')}
-          >
-            <Skill
-              hovered={this.state.webpack}
-              img={webpack}
-              name={'webpack'}
-              percentages={[ 0, 67 ]}
-            />
-          </div>
-          <div
-            className='tech-grid-item'
-            onMouseLeave={() => this.onHoverLeave('css3')}
-            onMouseEnter={() => this.onHover('css3')}
-          >
-            <Skill
-              hovered={this.state.css3}
-              img={css3}
-              name={'css3'}
-              percentages={[ 0, 65 ]}
-            />
-          </div>
-          <div
-            className='tech-grid-item'
-            onMouseLeave={() => this.onHoverLeave('html5')}
-            onMouseEnter={() => this.onHover('html5')}
-          >
-            <Skill
-              hovered={this.state.html5}
-              img={html5}
-              name={'html5'}
-              percentages={[ 0, 71 ]}
-            />
-          </div>
-          <div
-            className='tech-grid-item'
-            onMouseLeave={() => this.onHoverLeave('sass')}
-            onMouseEnter={() => this.onHover('sass')}
-          >
-            <Skill
-              hovered={this.state.sass}
-              img={sass}
-              name={'sass'}
-              percentages={[ 0, 48 ]}
-            />
-          </div>
-          <div
-            className='tech-grid-item'
-            onMouseLeave={() => this.onHoverLeave('nodejs')}
-            onMouseEnter={() => this.onHover('nodejs')}
-          >
-            <Skill
-              hovered={this.state.nodejs}
-              img={nodejs}
-              name={'nodejs'}
-              percentages={[ 0, 63 ]}
-            />
-          </div>
-          <div
-            className='tech-grid-item'
-            onMouseLeave={() => this.onHoverLeave('postgresql')}
-            onMouseEnter={() => this.onHover('postgresql')}
-          >
-            <Skill
-              hovered={this.state.postgresql}
-              img={postgresql}
-              name={'postgresql'}
-              percentages={[ 0, 52 ]}
-            />
-          </div>
-          <div
-            className='tech-grid-item'
-            onMouseLeave={() => this.onHoverLeave('mongodb')}
-            onMouseEnter={() => this.onHover('mongodb')}
-          >
-            <Skill
-              hovered={this.state.mongodb}
-              img={mongodb}
-              name={'mongodb'}
-              percentages={[ 0, 51 ]}
-            />
-          </div>
-          <div
-            className='tech-grid-item'
-            onMouseLeave={() => this.onHoverLeave('git')}
-            onMouseEnter={() => this.onHover('git')}
-          >
-            <Skill
-              hovered={this.state.git}
-              img={git}
-              name={'git'}
-              percentages={[ 0, 78 ]}
-            />
+        <div className="grid">
+        
+          <div className="tech-grid" >
+            <div
+              className='tech-grid-item'
+              onMouseLeave={() => this.onHoverLeave('javascript')}
+              onMouseEnter={() => this.onHover('javascript')}
+            >
+              <Skill
+                hovered={this.state.javascript}
+                img={javascript}
+                name={'javascript'}
+                percentages={[ 0, 62 ]}
+              />
+            </div>
+            <div
+              className='tech-grid-item'
+              onMouseLeave={() => this.onHoverLeave('react')}
+              onMouseEnter={() => this.onHover('react')}
+            >
+              <Skill
+                hovered={this.state.react}
+                img={react}
+                name={'react'}
+                percentages={[ 0, 77 ]}
+              />
+            </div>
+            <div
+              className='tech-grid-item'
+              onMouseLeave={() => this.onHoverLeave('redux')}
+              onMouseEnter={() => this.onHover('redux')}
+            >
+              <Skill
+                hovered={this.state.redux}
+                img={redux}
+                name={'redux'}
+                percentages={[ 0, 51 ]}
+              />
+            </div>
+            <div
+              className='tech-grid-item'
+              onMouseLeave={() => this.onHoverLeave('angular')}
+              onMouseEnter={() => this.onHover('angular')}
+            >
+              <Skill
+                hovered={this.state.angular}
+                img={angular}
+                name={'angular'}
+                percentages={[ 0, 53 ]}
+              />
+            </div>
+            <div
+              className='tech-grid-item'
+              onMouseLeave={() => this.onHoverLeave('webpack')}
+              onMouseEnter={() => this.onHover('webpack')}
+            >
+              <Skill
+                hovered={this.state.webpack}
+                img={webpack}
+                name={'webpack'}
+                percentages={[ 0, 67 ]}
+              />
+            </div>
+            <div
+              className='tech-grid-item'
+              onMouseLeave={() => this.onHoverLeave('css3')}
+              onMouseEnter={() => this.onHover('css3')}
+            >
+              <Skill
+                hovered={this.state.css3}
+                img={css3}
+                name={'css3'}
+                percentages={[ 0, 65 ]}
+              />
+            </div>
+            <div
+              className='tech-grid-item'
+              onMouseLeave={() => this.onHoverLeave('html5')}
+              onMouseEnter={() => this.onHover('html5')}
+            >
+              <Skill
+                hovered={this.state.html5}
+                img={html5}
+                name={'html5'}
+                percentages={[ 0, 71 ]}
+              />
+            </div>
+            <div
+              className='tech-grid-item'
+              onMouseLeave={() => this.onHoverLeave('sass')}
+              onMouseEnter={() => this.onHover('sass')}
+            >
+              <Skill
+                hovered={this.state.sass}
+                img={sass}
+                name={'sass'}
+                percentages={[ 0, 48 ]}
+              />
+            </div>
+            <div
+              className='tech-grid-item nodejs'
+              onMouseLeave={() => this.onHoverLeave('nodejs')}
+              onMouseEnter={() => this.onHover('nodejs')}
+            >
+              <Skill
+                hovered={this.state.nodejs}
+                img={nodejs}
+                name={'nodejs'}
+                percentages={[ 0, 63 ]}
+              />
+            </div>
+            <div
+              className='tech-grid-item'
+              onMouseLeave={() => this.onHoverLeave('postgresql')}
+              onMouseEnter={() => this.onHover('postgresql')}
+            >
+              <Skill
+                hovered={this.state.postgresql}
+                img={postgresql}
+                name={'postgresql'}
+                percentages={[ 0, 52 ]}
+              />
+            </div>
+            <div
+              className='tech-grid-item'
+              onMouseLeave={() => this.onHoverLeave('mongodb')}
+              onMouseEnter={() => this.onHover('mongodb')}
+            >
+              <Skill
+                hovered={this.state.mongodb}
+                img={mongodb}
+                name={'mongodb'}
+                percentages={[ 0, 51 ]}
+              />
+            </div>
+            <div
+              className='tech-grid-item'
+              onMouseLeave={() => this.onHoverLeave('git')}
+              onMouseEnter={() => this.onHover('git')}
+            >
+              <Skill
+                hovered={this.state.git}
+                img={git}
+                name={'git'}
+                percentages={[ 0, 78 ]}
+              />
+            </div>
+
           </div>
 
         </div>
