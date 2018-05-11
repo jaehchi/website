@@ -104,7 +104,7 @@ class Contact extends Component {
               <ul>
                 <li className="contact-grid-item">
                   <h4>
-                    Let's get in touch! And I welcome bribes in the form of ice cream.
+                    Let's get in touch! And I welcome all bribes in the form of ice cream.
                 </h4>
                 </li>
                 <li className="contact-grid-item">

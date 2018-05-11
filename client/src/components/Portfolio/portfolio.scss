@@ -108,11 +108,13 @@
   transition: all .5s ease;
 
   h4 {
-    font-size: 25px;
+    font-size: 20px;
     padding: 5px;
     margin: 20px;
     text-transform: uppercase;
     letter-spacing: 0.05em;
+    
+    border-bottom: .75px solid $white;
 
     transition: margin-bottom .3s ease-in;
   }

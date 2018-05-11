@@ -55,7 +55,7 @@ class Portfolio extends Component {
           <div className="portfolio-grid-item tictactoe">
             <img src={tictactoe} alt=""/>
             <div className="project-hover">
-              <h4>tictactoe</h4>
+              <h4>tic-tac-toe</h4>
               <a href="https://github.com/jaehchi/ticTacToe" target="_blank">View Code</a>
             </div>
           </div>

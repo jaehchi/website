@@ -33,7 +33,7 @@ class Footer extends Component {
           </li>
         </ul>
 
-        <div className="copyright">© Jaehyun Chi 2018</div>
+        <div className="copyright">Jaehyun Chi 2018</div>
 
       </div>
     );
