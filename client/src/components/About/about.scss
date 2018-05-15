@@ -7,7 +7,7 @@
 
 .about {
   width: 100%;
-  padding: 30px 0;
+  padding: 45px 0;
 
   display: flex;
   margin: auto;
@@ -30,20 +30,19 @@
   display: flex;
   justify-content: center;
   width: 75%;
-  padding: 40px 50px 60px 50px;
-
+  padding: 60px 75px 90px 75px;
 }
 
 .profile-image {
-  width: 300px;
-  height: 300px;
+  width: 450px;
+  height: 450px;
   display: flex;
   justify-content: center;
   align-items: center;
 
   img {
-    width: 250px;
-    padding: 10px;
+    width: 375px;
+    padding: 15px;
     border-radius: 50%;
   }
 }
@@ -54,7 +53,7 @@
 	background: $metallic;
   border-radius: .4em;
   width: 100%;
-  height: 80px;
+  height: 120px;
   
   h1 {
     display: flex;
@@ -64,7 +63,7 @@
     width: 100%;
     text-align: center;
     color: $sexyBeige;
-    font-size: 20px;
+    font-size: 30px;
     text-transform: uppercase;
     letter-spacing: 0.05em;
     line-height: 1.1em;
@@ -78,12 +77,12 @@
 	top: 50%;
 	width: 0;
 	height: 0;
-	border: 20px solid transparent;
+	border: 45px solid transparent;
 	border-right-color:$metallic;;
 	border-left: 0;
 	border-bottom: 0;
 	margin-top: -10px;
-	margin-left: -20px;
+	margin-left: -30px;
 }
 
 .description {
@@ -97,9 +96,9 @@
   p {
     text-align: center;
     display: flex;
-    padding: 0 10px 10px 10px;
+    padding: 0 15px 15px 15px;
     justify-content: center;
-    font-size: 12px;
+    font-size: 18px;
     line-height: 1.5em;
   }
 }
@@ -107,7 +106,7 @@
 .about-speech {
   display: flex;
   justify-content: center;
-  padding: 20px 0;
+  padding: 30px 0;
   width: 100%;
 }
 
@@ -117,7 +116,7 @@
   flex-wrap: wrap;
 
   background-color: $sexyBeige;
-  padding: 30px 0;
+  padding: 45px 0;
 
 
   .photo-grid-items {
@@ -127,7 +126,7 @@
     align-items: center;
     
     img {
-      height: 200px;
+      height: 450px;
       // -webkit-filter: grayscale(100%);
       width: 100%;
     }
@@ -144,7 +143,7 @@
   align-items: center;
   flex-direction: column;
 
-  padding: 80px 50px 60px 50px;
+  padding: 120px 75px 90px 75px;
   
   width: 100%;
 }
@@ -153,23 +152,23 @@
   display: flex;
   justify-content: center;
   width: 60%;
-  font-size: 12px;
+  font-size: 18px;
   line-height: 1.5em;
 
   ol {
     list-style: decimal;
-    font-size: 15px;
+    font-size: 22.5px;
   }
 
   em {
     color: $nightFall;
     font-weight: 700;
-    font-style:italic;
+    font-style: italic;
   }
 
   li {
-    font-size: 12px;
-    padding: 10px;
+    font-size: 18px;
+    padding: 18px;
   }
   
 
@@ -180,7 +179,7 @@
   justify-content: center;
   align-items: center;
 
-  padding-bottom: 20px;
+  padding-bottom: 30px;
   width: 100%;
 
   h1 {
@@ -190,11 +189,11 @@
     width: 60%;
     border-bottom: .75px solid $metallic;
 
-    font-size: 30px;
+    font-size: 45px;
     text-transform: uppercase;
     letter-spacing: 0.05em;
     line-height: 1.1em;
-    padding-bottom: 15px;
+    padding-bottom: 22.5px;
   }
 }
 
@@ -204,21 +203,25 @@
 
 @include media('<=phone') { 
   .about-profile {
+    padding: 30px 0;
+
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
   }
 
   .profile-image {
-    width: 200px;
-    height: 200px;
+    width: 300px;
+    height: 300px;
   
     img {
-      width: 100%;
+      width: 150px;
+      height: 150px;
     }
   }  
   
-  .about-speehc {
+  .about-speech {
     padding-top: 20px;
     width: 100%;
     
@@ -240,7 +243,7 @@
       width: 100%;
 
       img {
-        height: 300px;
+        height: 450px;
       }
     }
   }
@@ -253,9 +256,7 @@
   }
 
   .about-content {
-    p {
-      width: 100%;
-    }
+    padding: 50px 20px;
   }
 
 
@@ -276,16 +277,23 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    padding: 80px 0;
   }
 
   .profile-image {
     padding-bottom: 0;
     width: 300px;
     height: 300px;
+
+    img {
+      width: 300px;
+      height: 300px;
+    }
   }  
   
-  .about-speehc {
-    // padding-top: 20px;
+  .about-speech {
+    padding-top: 60px;
     width: 100%;
     
     h1 {
@@ -303,9 +311,9 @@
 
   .photo-grid {
     .photo-grid-items {
-      width: 50%;
+      width: 100%;
       img {
-        height: 200px;
+        height: 450px;
       }
     }
   }
@@ -317,10 +325,9 @@
   }
 
   .about-content {
-    p {
-      width: 90%;
-    }
+    padding: 50px 20px;
   }
+
 
   .about-bubble:after {
     top: 0;
@@ -337,8 +344,17 @@
 /* -- Medium Screens -- */ 
 
 @include media(">tablet", "<desktop") {
-  .about-speehc {
-    padding-top: 20px;
+
+  .about-profile {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+
+  
+  .about-speech {
+    padding-top: 30px;
     width: 100%;
     
     h1 {
@@ -346,12 +362,27 @@
     }
   }
   
+  .description {
+    width: 100%;
+  }
+  
+  .about-bubble {
+    width: 100%;
+  }
+
+  .about-bubble:after {
+    top: 0;
+    left: 50%;
+    margin-top: -40px;
+    margin-left: -40px;
+  }
+  
   .photo-grid {
     .photo-grid-items {
-      width: 33.333%;
+      width: 50%;
 
       img {
-        height: 250px;
+        height: 375px;
       }
     }
   }
@@ -363,10 +394,16 @@
   }
 
   .about-content {
+    width: 100%;
     p {
       width: 70%;
     }
   }
+
+  .about-me-description {
+    width: 70%;
+  }
+  
 
 }
 
@@ -378,7 +415,7 @@
       width: 33.333%;
 
       img {
-        height: 300px;
+        height: 450px;
       }
     }
   }

@@ -30,7 +30,7 @@
 .social {
   display: flex;
   justify-content: center;
-  padding-top: 25px;
+  padding-top: 40px;
 
   li {
     padding: 5px;
@@ -40,7 +40,7 @@
     padding: 3px 6px 1px 6px;
 
     color: $white;
-    font-size: 30px;
+    font-size: 45px;
   }
 
   a:hover {
@@ -56,10 +56,10 @@
 .copyright {
   display: flex;
   justify-content: center;
-  padding-top: 10px;
-  padding-bottom: 25px;
+  padding-top: 15px;
+  padding-bottom: 40px;
 
-  font-size: 10px;
+  font-size: 15px;
   text-transform: uppercase;
 }
 
@@ -72,7 +72,7 @@
 
     .social {
       a {
-        font-size: 30px;
+        font-size: 45px;
         padding:  10px 5px;
       }
     }
@@ -90,7 +90,7 @@
   .footer {
     .social {
       a {
-        font-size: 30px;
+        font-size: 45px;
       }
     }
 
@@ -107,7 +107,7 @@
   .footer {
     .social {
       a {
-        font-size: 30px;
+        font-size: 45px;
       }
     }
 
@@ -123,12 +123,12 @@
   .footer {
     .social {
       a {
-        font-size: 30px;
+        font-size: 45px;
       }
     }
 
     .copyright {
-      font-size: 10px;
+      font-size: 15px;
     }
   }
 }

@@ -40,7 +40,7 @@
 }
 
 .position {
-  padding: 20px 0;
+  padding: 30px 0;
   letter-spacing: 0.05em;
 }
 
@@ -48,15 +48,18 @@
   display: flex;
   justify-content: center;
   width: 80%;
-  padding: 20px; 
+  padding: 30px; 
 
   a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     border: .75px solid $white;
-    padding: 8px 10px; 
-    margin: 2px;
+    padding: 12px 15px; 
+    margin: 4px;
 
     color: $white;
-    font-size: 12px;
+    font-size: 16px;
     text-decoration: none;
     text-transform: uppercase;
     letter-spacing: 0.05em;
@@ -73,7 +76,7 @@
   
 
   i {
-    padding-right: 2px;
+    padding-right: 3px;
   }
 }
 
@@ -93,6 +96,14 @@
   .position {
     font-size: 8px;
   }
+
+  .btn {
+    flex-direction: column;
+    width: 50%;
+    a {
+      font-size: 12px;
+    }
+  }
 }
 
 /* -- Small Screens -- */ 
@@ -104,6 +115,15 @@
 
   .position {
     font-size: 12px;
+  }
+
+  .btn {
+    flex-direction: column;
+    width: 50%;
+
+    a {
+      font-size: 12px;
+    }
   }
 }
 
@@ -122,10 +142,10 @@
 
 @include media(">desktop") {
   .name {
-    font-size: 50px;
+    font-size: 75px;
   }
 
   .position {
-    font-size: 18px;
+    font-size: 27px;
   }
 }

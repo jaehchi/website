@@ -63,10 +63,9 @@ class About extends Component {
           <div className="about-me-description">
             <ol>
               <li>
-                <p>
                   <em>The Happiness of Making Things. </em>
                   Remember the joy of building anything from your imagination with legos? The smirk on your face when you look at your lego structure, thinking to yourself, I built that. Programming brings me back to that feeling.
-                </p>
+  
               </li>
               <li>
                 <em>The Pleasure of Making a Difference. </em>

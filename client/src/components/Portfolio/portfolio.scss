@@ -10,8 +10,8 @@
   position: relative;
   
   width: 100%;
-  padding: 60px 0;
-  padding-bottom: 80px;
+  padding: 90px 0;
+  padding-bottom: 120px;
   
   background: $stone;
   font-family: 'Open Sans', Arial, sans-serif;
@@ -31,7 +31,7 @@
   align-items: center;
   flex-direction: column;
   
-  padding: 25px 50px 0 50px;
+  padding: 40px 75px 0 75px;
   width: 100%;
 }
 
@@ -40,7 +40,7 @@
   justify-content: center;
   align-items: center;
 
-  padding-bottom: 20px;
+  padding-bottom: 30px;
   width: 100%;
   
   h1 {
@@ -51,7 +51,7 @@
     color: $metallic;
     border-bottom: .75px solid $metallic;
 
-    font-size: 30px;
+    font-size: 45px;
     text-transform: uppercase;
     letter-spacing: 0.05em;
     line-height: 1.1em;
@@ -65,7 +65,7 @@
   flex-wrap: wrap;
   
   width: 80%;
-  padding: 20px;
+  padding: 30px;
 }
 
 .portfolio-grid-item {
@@ -73,71 +73,66 @@
   justify-content: center;
   align-items: center;
   
-  margin: 10px;
-  width: 215px;
-  height: 265px;
+  margin: 15px;
+  width: 325px;
+  height: 400px;
   // padding: 15px;
 
   img {
-    width: 200px;
-    height: 200px;
+    width: 300px;
+    height: 300px;
     position: absolute;
   }
 
 }
 
-.cits {
-  background-color: $oliveGreen;
-  
-}
-
 .project-hover {
-
+  
   display: flex;
   flex-direction: column;
-
+  
   justify-content: center;
   align-items: center;
-
-
+  
+  
   visibility: hidden;
   color: $white;
   opacity: 0;
   z-index: 2;
-
+  
   transition: all .5s ease;
-
+  
   h4 {
-    font-size: 20px;
-    padding: 5px;
-    margin: 20px;
+    font-size: 30px;
+    padding: 8px;
+    margin: 30px;
     text-transform: uppercase;
     letter-spacing: 0.05em;
     
     border-bottom: .75px solid $white;
-
+    
     transition: margin-bottom .3s ease-in;
   }
-
-
+  
+  
   a {
     color: $white;
-    width: 80px;
-    border: .5px solid  $white;
+    width: 120px;
+    border: .5px solid $white;
     
-    padding: 8px 10px;;
+    padding: 12px 15px;
     margin: 10px;
     
     text-decoration: none;
     text-align: center;
-    font-size: 10px;
+    font-size: 15px;
     text-transform: uppercase;
     letter-spacing: 0.05em;
-
+    
     transition: margin-bottom .3s ease-in;
   }
-
-
+  
+  
 }
 
 .portfolio-grid-item:hover .project-hover {
@@ -146,36 +141,40 @@
   
   height: 100%;
   width: 100%;
-
+  
   background: linear-gradient(
     rgba(0, 0, 0, 0.8),
     rgba(0, 0, 0, 0.8)
     );
-
-  h4 {
-    margin: 10px;
+    
+    h4 {
+      margin: 15px;
+    }
+    
+    a {
+      margin: 5px;
+    }
+    
+    a:hover {
+      background: $white;
+      color: $metallic;
+    }
+    
+    .current {
+      margin: 5px;
+    }
+    
+    transition: margin-bottom .3s ease-in;
   }
   
-  a {
-    margin: 3px;
+  
+  .cits {
+    background-color: $oliveGreen;
   }
   
-  a:hover {
-    background: $white;
-    color: $metallic;
+  .codesling {
+    background-color: $torq;
   }
-
-  .current {
-    margin: 3px;
-  }
-
-  transition: margin-bottom .3s ease-in;
-}
-
-
-.codesling {
-  background-color: $torq;
-}
 
 .bonebuds {
   background-color: $nightFall;
@@ -193,7 +192,7 @@
   background-color: $redBrown;
 
   img {
-    height: 125px;
+    height: 200px;
   }
 }
 
