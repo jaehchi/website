@@ -58,15 +58,14 @@ class About extends Component {
         
         <div className="about-content">
           <div className="about-me">
-            <h1>Understand Who I am</h1>
+            <h1>Why I love Coding</h1>
           </div>
           <div className="about-me-description">
             <ol>
-              <h4>Why I love Coding</h4>
               <li>
                 <p>
                   <em>The Happiness of Making Things. </em>
-                  Remember the joy of building anything from your imagination with legos? The smirk on your face when you look at your lego structure, thinking to yourself, I built that. Programming brings my back to that feeling.
+                  Remember the joy of building anything from your imagination with legos? The smirk on your face when you look at your lego structure, thinking to yourself, I built that. Programming brings me back to that feeling.
                 </p>
               </li>
               <li>
@@ -75,14 +74,14 @@ class About extends Component {
               </li>
               <li>
                 <em>The Fascination with a Puzzle and it's Interactive Parts. </em>
-                It is fascinating to see individual pieces, working together in subtle ways, and seeing the outcome. It's like a puzzle. Which piece goes well with others. Why does this piece fit better than that piece.
+                It is fascinating to see individual pieces, working together in subtle ways, and seeing the outcome.
               </li>
               <li>
                 <em>The Joy of Teamwork. </em>
                 Being a part of a team is one of the greatest highs in the world, especially if the goals of the team is worthwhile. It gives a sense of belonging, and usually, you come out a stronger and better person.
               </li>
               <li>
-                <em>The Bliss of Having No Glass Ceiling. </em>
+                <em>A Growth with No Limit. </em>
                 With programming, the sky is literally the limit. Anything I can think of, I can make it. It doesn't get stale either. There are always something new to learn. And if you learned everything, there are infinite solutions to a problem. It's endless.
               </li>
 
