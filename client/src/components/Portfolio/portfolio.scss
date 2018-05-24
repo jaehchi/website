@@ -168,13 +168,13 @@
   }
   
   
-  .cits {
-    background-color: $oliveGreen;
-  }
-  
-  .codesling {
-    background-color: $torq;
-  }
+.cits {
+  background-color: $oliveGreen;
+}
+
+.codesling {
+  background-color: $torq;
+}
 
 .bonebuds {
   background-color: $nightFall;
@@ -198,23 +198,23 @@
 
 
 .current {
-
+  
   padding: 3px 0 10px 0;
   margin: 5px;
 
   a {
-    width: 80px;
+    width: 100%;
 
     background: $white;
     color: $heavyRed;
 
     border: .5px solid  $white;
     
-    padding: 8px 10px;;
+    padding: 12px 11px;
     
     text-decoration: none;
     text-align: center;
-    font-size: 10px;
+    font-size: 12px;
     text-transform: uppercase;
     letter-spacing: 0.05em;
 
