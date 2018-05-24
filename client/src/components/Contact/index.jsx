@@ -24,11 +24,9 @@ class Contact extends Component {
     this.onError = this.onError.bind(this);
   }
 
-  componentWillMount() {
-    this.REST = process.env.NODE_ENV === "production" ? 
-    process.env.AWS_HOST : process.env.LOCAL_HOST
-
-    console.log('asdfasdf', this.REST);
+  async componentWillMount() {
+    this.SMTP_URL = process.env.NODE_ENV === "production" ? 
+    process.env.SMTP_SERVER_AWS_HOST : process.env.SMTP_SERVER_LOCAL_HOST
   }
 
   onChange(e) {
@@ -49,7 +47,7 @@ class Contact extends Component {
     let data = null;
 
     try {
-      data = { data } = await axios.post(`${this.REST_URL}/api/sendEmail`, payload)
+      data = { data } = await axios.post(`${this.SMTP_URL}/api/sendEmail`, payload)
     } catch (err) {
       // console.log(err)
     }
@@ -97,7 +95,6 @@ class Contact extends Component {
   }
 
   render() {
-
     return (
       <div className="contact section" name="contact" id="contact">
 
