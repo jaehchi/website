@@ -24,6 +24,13 @@ class Contact extends Component {
     this.onError = this.onError.bind(this);
   }
 
+  componentWillMount() {
+    this.REST = process.env.NODE_ENV === "production" ? 
+    process.env.AWS_HOST : process.env.LOCAL_HOST
+
+    console.log('asdfasdf', this.REST);
+  }
+
   onChange(e) {
     this.setState({
       [ e.target.name ]: e.target.value
@@ -42,7 +49,7 @@ class Contact extends Component {
     let data = null;
 
     try {
-      data = { data } = await axios.post('http://localhost:8080/api/sendEmail', payload)
+      data = { data } = await axios.post(`${this.REST_URL}/api/sendEmail`, payload)
     } catch (err) {
       // console.log(err)
     }
