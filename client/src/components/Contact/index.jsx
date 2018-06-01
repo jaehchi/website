@@ -80,7 +80,7 @@ class Contact extends Component {
       }
 
       if (message === 'email') {
-        errorMessages[ name ] = `${name} must be a valid email adresss.`
+        errorMessages[ name ] = `${name} must be a valid email address.`
       }
 
       if (message === ' long') {
