@@ -1,13 +1,15 @@
 require('dotenv').config();
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
-const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+
 const { resolve } = require('path');
 const webpack = require('webpack');
 
-const extractStyles = new ExtractTextPlugin('.css', {
-  allChunks: true
-});
+const extractStyles = new MiniCssExtractPlugin({
+  filename: "main.css",
+  chunkFilename: "[id].css"
+})
 
 
 const optimizeStyles = new OptimizeCssAssetsPlugin({
@@ -38,7 +40,12 @@ module.exports = {
       },
       {
         test: /\.(scss|css)$/,
-        loaders: ['style-loader', 'css-loader', 'sass-loader'],
+        loaders: [ MiniCssExtractPlugin.loader, {
+          loader: 'css-loader',
+          options: {
+            minimize: true || {/* CSSNano Options */}
+          }
+        }, 'sass-loader'],
       },
       {
         test: /\.(pdf|gif|png|jpe?g)$/,
