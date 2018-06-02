@@ -1,6 +1,7 @@
 require('dotenv').config();
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
 const { resolve } = require('path');
 const webpack = require('webpack');
 
@@ -53,6 +54,7 @@ module.exports = {
     extensions: [ '.js', '.jsx' ]
   },
   plugins: [
+    new UglifyJsPlugin(),
     extractStyles,
     optimizeStyles,
     new webpack.DefinePlugin({
