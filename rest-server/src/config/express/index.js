@@ -2,9 +2,11 @@ import express from 'express';
 import cors from 'cors';
 import helmet from 'helmet';
 import parser from 'body-parser';
+import compression from 'compression';
 import { resolve } from 'path'
 
 const middleWare = [
+  compression(),
   helmet(),
   cors({
     allowedHeaders: ['Content-type', 'Authorization'],
