@@ -4,20 +4,17 @@ const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const { resolve } = require('path');
 const webpack = require('webpack');
 
-// const extractStyles = new ExtractTextPlugin('./styles/[name].css', {
-//   allChunks: true
-// });
+const extractStyles = new ExtractTextPlugin('.css', {
+  allChunks: true
+});
 
-// const entry = {
-//   About: resolve('./src/components/About/About.scss')
-// }
 
-// const optimizeStyles = new OptimizeCssAssetsPlugin({
-//   assetNameRegExp: /\.optimize\.css$/g,
-//   cssProcessor: require('cssnano'),
-//   cssProcessorOptions: { discardComments: { removeAll: true } },
-//   canPrint: true
-// });
+const optimizeStyles = new OptimizeCssAssetsPlugin({
+  assetNameRegExp: /\.optimize\.css$/g,
+  cssProcessor: require('cssnano'),
+  cssProcessorOptions: { discardComments: { removeAll: true } },
+  canPrint: true
+});
 
 
 module.exports = {
@@ -44,7 +41,7 @@ module.exports = {
       },
       {
         test: /\.(pdf|gif|png|jpe?g)$/,
-        loader: "file-loader?name=/icons/[name].[ext]"
+        loader: "file-loader?name=/images/[name].[ext]"
       },
       {
         test: /\.svg(\?v=\d+\.\d+\.\d+)?$/,
@@ -55,11 +52,9 @@ module.exports = {
   resolve: {
     extensions: [ '.js', '.jsx' ]
   },
-  // plugins: [
-  //   extractStyles,
-  //   optimizeStyles
-  // ],
   plugins: [
+    extractStyles,
+    optimizeStyles,
     new webpack.DefinePlugin({
       'process.env': {
         'NODE_ENV': JSON.stringify(process.env.NODE_ENV),
