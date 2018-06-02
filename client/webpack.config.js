@@ -2,15 +2,19 @@ require('dotenv').config();
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-
 const { resolve } = require('path');
 const webpack = require('webpack');
+
+const uglyJS = new UglifyJsPlugin({
+  uglifyOptions : {
+    compress: true
+  }
+});
 
 const extractStyles = new MiniCssExtractPlugin({
   filename: "main.css",
   chunkFilename: "[id].css"
-})
-
+});
 
 const optimizeStyles = new OptimizeCssAssetsPlugin({
   assetNameRegExp: /\.optimize\.css$/g,
@@ -19,6 +23,13 @@ const optimizeStyles = new OptimizeCssAssetsPlugin({
   canPrint: true
 });
 
+const envVariables = new webpack.DefinePlugin({
+  'process.env': {
+    'NODE_ENV': JSON.stringify(process.env.NODE_ENV),
+    'SMTP_SERVER_LOCAL_HOST': JSON.stringify(process.env.SMTP_SERVER_LOCAL_HOST),
+    'SMTP_SERVER_AWS_HOST': JSON.stringify(process.env.SMTP_SERVER_AWS_HOST)
+  }
+});
 
 module.exports = {
   entry: [ 'babel-polyfill', resolve('./src/index') ],
@@ -43,13 +54,36 @@ module.exports = {
         loaders: [ MiniCssExtractPlugin.loader, {
           loader: 'css-loader',
           options: {
-            minimize: true || {/* CSSNano Options */}
+            minimize: true
           }
         }, 'sass-loader'],
       },
       {
-        test: /\.(pdf|gif|png|jpe?g)$/,
-        loader: "file-loader?name=/images/[name].[ext]"
+        test: /\.(pdf|gif|png|jpe?g)$/i,
+        use: [
+          'file-loader',
+          {
+            loader: 'image-webpack-loader',
+            options: {
+              mozjpeg: {
+                progressive: true,
+                quality: 65
+              },
+              optipng: {
+                optimizationLevel: 7,
+              },
+              pngquant: {
+                quality: 65,
+              },
+              svggo: {
+                enabled: false,
+              },
+              webp: {
+                quality: 65
+              }
+            }
+          },
+        ],
       },
       {
         test: /\.svg(\?v=\d+\.\d+\.\d+)?$/,
@@ -61,15 +95,9 @@ module.exports = {
     extensions: [ '.js', '.jsx' ]
   },
   plugins: [
-    new UglifyJsPlugin(),
+    uglyJS,
     extractStyles,
     optimizeStyles,
-    new webpack.DefinePlugin({
-      'process.env': {
-        'NODE_ENV': JSON.stringify(process.env.NODE_ENV),
-        'SMTP_SERVER_LOCAL_HOST': JSON.stringify(process.env.SMTP_SERVER_LOCAL_HOST),
-        'SMTP_SERVER_AWS_HOST': JSON.stringify(process.env.SMTP_SERVER_AWS_HOST)
-      }
-    })
+    envVariables
   ]
 };
