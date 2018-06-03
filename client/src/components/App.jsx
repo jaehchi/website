@@ -13,9 +13,24 @@ import './index.scss';
 class App extends Component {
   constructor(props) {
     super(props);
+
+    this.state = {
+      isLoading: true
+    }
+  }
+
+  componentDidMount() {
+    setTimeout(() => {
+      this.setState({
+        isLoading: false,
+      })
+    }, 500);
   }
 
   render() {
+    if (this.state.isLoading ) {
+      return null;
+    }
     return (
       <div className="page">
         <Header/>
