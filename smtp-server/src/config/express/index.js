@@ -28,6 +28,11 @@ class App {
 
   mountMiddleWare() {
     this.express.use(...middleWare);
+    this.express.get('*.js', function (req, res, next) {
+      req.url = req.url + '.gz';
+      res.set('Content-Encoding', 'gzip');
+      next();
+    });
   }
 
   mountRoutes () {
