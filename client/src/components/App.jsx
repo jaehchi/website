@@ -14,23 +14,23 @@ class App extends Component {
   constructor(props) {
     super(props);
 
-    this.state = {
-      isLoading: true
-    }
+    // this.state = {
+    //   isLoading: true
+    // }
   }
 
-  componentDidMount() {
-    setTimeout(() => {
-      this.setState({
-        isLoading: false,
-      })
-    }, 500);
-  }
+  // componentDidMount() {
+  //   setTimeout(() => {
+  //     this.setState({
+  //       isLoading: false,
+  //     })
+  //   }, 500);
+  // }
 
   render() {
-    if (this.state.isLoading ) {
-      return null;
-    }
+    // if (this.state.isLoading ) {
+    //   return null;
+    // }
     return (
       <div className="page">
         <Header/>
@@ -46,3 +46,13 @@ class App extends Component {
 }
 
 export default App; 
+
+{/* <div class="loader">
+<div class="spinner">
+  <div class="rect1"></div>
+  <div class="rect2"></div>
+  <div class="rect3"></div>
+  <div class="rect4"></div>
+  <div class="rect5"></div>
+</div>
+</div> */}
