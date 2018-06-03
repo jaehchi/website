@@ -1,16 +1,33 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <title>Jaehyun Chi</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon" />
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
-  </head>
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
-  <body>
-    <div id="app"></div>
-    <script src="/bundle.js"></script>
-  </body>
+
+<head>
+  <meta charset="utf-8" />
+  <title>Jaehyun Chi</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon" />
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+</head>
+<body>
+  <div id="app"></div>
+  <script src="/bundle.js"></script>
+  <script type='text/javascript'>
+    function loadCSS(e, t, n) {
+      "use strict"; 
+      var i = window.document.createElement("link"); 
+      var o = t || window.document.getElementsByTagName("script")[ 0 ]; 
+      i.rel = "stylesheet"; i.href = e; i.media = "only x"; 
+      o.parentNode.insertBefore(i, o); 
+      setTimeout(function () { 
+        i.media = n || "all" 
+      }) 
+    } 
+      loadCSS("https://use.fontawesome.com/releases/v5.0.10/css/all.css");
+    </script>
+</body>
+
 </html>
+
+
+
