@@ -56,7 +56,7 @@ module.exports = {
           options: {
             minimize: true
           }
-        }, 'sass-loader'],
+        }, 'postcss-loader', 'sass-loader', ],
       },
       {
         test: /\.(pdf|gif|png|jpe?g)$/i,
